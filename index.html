@@ -16,6 +16,41 @@ body {font-family: "Lato", sans-serif}
   margin-right: auto;
   padding: 0px;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  margin-left: auto;
+  margin-right: auto;
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 </style>
 </head>
@@ -62,19 +97,25 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-black" id="media">
     <div class="w3-container w3-content w3-padding-48" style="max-width:800px">
       <h2 class="w3-wide w3-center">MEDIA</h2>
-      <p class="w3-opacity w3-center"><i>a.k.a. unprofessional photography.</i></p>
-      <table class="center">
-        <tr>
-          <td><img src="/images/NOThungover.jpeg" style="width:82%"></td>
-          <td><img src="/images/me.jpeg" style="width:97%"></td>
-          <td><img src="/images/gotamatch.jpeg" style="width:50%"></td>
-        </tr>
-      </table>
-      </div>
-    </div>
-  </div>
-
-
+      <p class="w3-opacity w3-center"><i></i></p>
+	  <div class="center">
+	    <div class="row">
+          <div class="column">
+            <img src="images/btb.jpg">
+            <img src="images/me.jpeg">
+          </div>
+          <div class="column">
+            <img src="images/timpani.jpg">
+            <img src="images/gotamatch.jpeg">
+          </div>
+          <div class="column">
+            <img src="images/upright.jpg">
+            <img src="images/NOThungover.jpeg">
+          </div>
+         </div>
+	 </div>
+	</div>
+   </div>
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
@@ -86,7 +127,7 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-col m6">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPmKtZlle5qYdy49YSqR43WhV0vlLFxM4ovc8WLxdU5jvv2Q/viewform?embedded=true" width="700" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPmKtZlle5qYdy49YSqR43WhV0vlLFxM4ovc8WLxdU5jvv2Q/viewform?embedded=true" width="450" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 		  </div>
       </div>
     </div>
