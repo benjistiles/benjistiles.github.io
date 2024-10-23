@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Links website</title>
+<script src="https://unpkg.com/feather-icons"></script>
+
+
+<style>
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(lightgray, black);; /* The image used for background */
+  background-position: top; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: auto; /* Resize the background image to cover the entire container */
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.name {
+  margin-top: 10px !important;
+}
+
+.w3-theme-d3 {
+  background-color: rgba(42, 169, 219, 0.6) !important;
+}
+
+.w3-theme-d3:hover {
+  background-color: rgba(42, 169, 219, 0.8) !important;
+}
+
+a {
+  font-size: x-large;
+}
+
+.w3-border {
+  border: 3px solid #ccc !important;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  jusify-content: center;
+  align-items: center;
+}
+
+.links-container a {
+  width: 100%;
+}
+
+.profession {
+  font-size: 14px;
+}
+
+.subscribe {
+  font-size: 15px;
+}
+
+.submit form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit form button {
+  margin-top: 5px;
+  background-color: rgba(27, 122, 159, 0.9) !important;
+  color: #fff !important;
+}
+
+.submit form button:hover {
+  background-color: rgba(15, 67, 87, 0.9) !important;
+  color: #fff !important;
+}
+.submit form input {
+  width: 100% !important;
+}
+.submit form input::placeholder {
+  color: #fff;
+}
+
+.icons {
+  display: flex;
+  gap: 40px;
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+.icons a svg {
+  fill: #d0ecf7;
+  transform: scale(1.5);
+}
+
+@media screen and (min-width: 768px) {
+  .link {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .profession {
+    font-size: 24px;
+  }
+}
+</style>
+  </head>
+
+  <body>
+    <!-- Content container -->
+    <div class="container">
+
+      <!-- Image and name container. Change to your picture here. -->
+      <div class="" style="text-align: center">
+        <img src="images/authenticity.jpg" class="w3-round" alt="person image" width="225px" height="225px" style="border-radius: 50%; border: 3px solid #363636 !important; margin-top: 6px;">
+		  <div style="line-height:200%;">
+			  <br>
+		  </div>
+      </div>
+
+      <!-- Links section 1. Replace the # inside of the "" with your links. -->
+      <div class="links-container">
+        <body class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  		<a href="https://open.spotify.com/album/39VVF65XODeoVWyfOZPb9e?si=hZXd2tiwSLy3NSkKIqZvJw"> <i class="fa fa-spotify w3-hover-opacity" style="font-size: 76px; color: lightgreen"></i></a>
+			<br>
+  		<a href="https://www.instagram.com/officialauthenticity/"> <i class="fa fa-instagram w3-hover-opacity" style="font-size: 72px; color: lightsalmon"></i></a>
+			<br>
+  		<a href=""> <i class="fa fa-paypal w3-hover-opacity" style="font-size: 68px; color: lightskyblue"></i></a>
+			<br>
+	 </body>
+    </div>
+    </div>
+    <script>
+      feather.replace()
+    </script>
+  </body>  
+</html>
