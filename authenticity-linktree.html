@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">   
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,9 +13,12 @@
 <style>
 
 body {
-  height: 100vh;
-  width: 100vw;
-  background-image: linear-gradient(lightgray, black);; /* The image used for background */
+  min-height: 100vh;
+  max-height: none;
+  min-width: 100vw;
+  max-width: none;
+  position: relative;
+  background-image: linear-gradient(lightgray, black); /* The image used for background */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -134,19 +137,20 @@ a {
       <!-- Links section 1. Replace the # inside of the "" with your links. -->
       <div class="links-container">
         <body class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  		<a href="https://open.spotify.com/album/39VVF65XODeoVWyfOZPb9e?si=hZXd2tiwSLy3NSkKIqZvJw"> <i class="fa fa-spotify w3-hover-opacity" style="font-size: 68px; color: lightgreen"></i></a>
+				<a href="https://open.spotify.com/album/39VVF65XODeoVWyfOZPb9e?si=hZXd2tiwSLy3NSkKIqZvJw"> <i class="fa fa-spotify w3-hover-opacity" style="font-size: 68px; color: lightgreen"></i></a>
 		  <div style="line-height:50%;">
 			  <br>
-		  </div>  		<a href="https://www.instagram.com/officialauthenticity/"> <i class="fa fa-instagram w3-hover-opacity" style="font-size: 64px; color: lightsalmon"></i></a>
+		  </div>  		
+				<a href="https://www.instagram.com/officialauthenticity/"> <i class="fa fa-instagram w3-hover-opacity" style="font-size: 64px; color: lightsalmon"></i></a>
 		  <div style="line-height:65%;">
 			  <br>
-		  </div>  		<a href="https://www.facebook.com/JohnnyMannCenterforCommercialMusic/"> <i class="fa fa-facebook w3-hover-opacity" style="font-size: 62px; color: deepskyblue"></i></a>
+		  </div>  		
+				<a href="https://www.facebook.com/JohnnyMannCenterforCommercialMusic/"> <i class="fa fa-facebook w3-hover-opacity" style="font-size: 62px; color: deepskyblue"></i></a>
 		  <div style="line-height:50%;">
 			  <br>
-		  </div>  		<a href="https://ci.ovationtix.com/35709/store/donations/47197"> <i class="fa fa-money w3-hover-opacity" style="font-size: 60px; color: lightyellow"></i></a>
-		  <div style="line-height:50%;">
-			  <br>
-		  </div>	 </body>
+		  </div>  		
+				<a href="https://ci.ovationtix.com/35709/store/donations/47197"> <i class="fa fa-money w3-hover-opacity" style="font-size: 60px; color: lightyellow"></i></a>	   
+		</body>
     </div>
     </div>
   </body>  
