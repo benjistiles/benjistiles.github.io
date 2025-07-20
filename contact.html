@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="9KErrLdhNIkCLOKsqVLwa5PEATgsbXruXN302e7-bHQ">
+  <title>Benji Stiles Music</title>
+  <link rel="icon" type="image/png" href="/images/Logo%20copy%20transparent.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  /* Import modern font */
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body { 
+    font-family: 'Work Sans', sans-serif; 
+    background-color: #0d0d0d; /* Darker black */
+    color: #e8e6e3; /* Warm off-white */
+    margin: 0;
+    opacity: 0;
+    animation: fadeInBody 1s ease forwards;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #f0c987; /* Warm gold */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  .mySlides { display: none; }
+  .center { margin: 0 auto; padding: 0; }
+
+  .row { 
+    display: flex; 
+    flex-wrap: wrap; 
+    padding: 0 8px; 
+    margin-bottom: 32px;
+  }
+
+  .column {
+    margin: auto;
+    flex: 33%;
+    max-width: 66%;
+    max-height: 100%;
+    padding: 0 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .column img, .column video {
+    margin-top: 12px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.4s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+  }
+
+  .column img:hover, .column video:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 30px rgba(240, 201, 135, 0.4);
+  }
+
+  @media (max-width: 800px) {
+    .column { flex: 50%; max-width: 50%; }
+  }
+
+  @media (max-width: 600px) {
+    .column { flex: 100%; max-width: 100%; padding: 0 8px; }
+  }
+
+  .gallery { 
+    border: 0px solid #f0c987; /* Gold border */
+    border-radius: 14px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 32px;
+  }
+
+  .gallery:hover { 
+    border-color: #ffd966; /* Bright gold on hover */
+  }
+
+  .desc { 
+    color: #f0c987; /* Gold text */
+    margin-top: 8px; 
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    padding-top: 100px;
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .modal-content {
+    margin: auto; 
+    display: block;
+    width: 80%; 
+    max-width: 700px;
+    border-radius: 18px;
+    animation: zoom 0.4s;
+  }
+
+  .row.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .row.gallery img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 14px 34px rgba(240, 201, 135, 0.4);
+  }
+
+  #caption {
+    margin: auto; 
+    display: block;
+    width: 80%; 
+    max-width: 700px;
+    text-align: center; 
+    color: #f0c987;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  .close {
+    position: absolute; 
+    top: 15px; 
+    right: 35px;
+    color: #f0c987;
+    font-size: 42px; 
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 14px #a8761b;
+    transition: color 0.3s ease;
+  }
+
+  .close:hover { color: #ffd966; }
+
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    background: #1e1e1e;
+    padding: 0px 0px;
+    box-shadow: 0 3px 12px rgba(240, 201, 135, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar a {
+    color: #f0c987;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #ffd966;
+  }
+
+  /* Footer */
+  footer {
+    background: #1e1e1e;
+    color: #f0c987;
+    text-align: center;
+    padding: 24px 12px;
+    font-size: 0.9rem;
+    border-top: 1px solid #4a3c07;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  footer a {
+    color: #ffd966;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #fff3b0;
+  }
+
+  /* Animations */
+  @keyframes zoom {
+    from { transform: scale(0.1); }
+    to { transform: scale(1); }
+  }
+
+  @keyframes fadeInBody {
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card navbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="media.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MEDIA</a>
+    <a href="photography.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PHOTOGRAPHY</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-large w3-hide-medium" onclick="toggleNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Responsive Navbar -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">HOME</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">ABOUT</a>
+  <a href="media.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">MEDIA</a>
+  <a href="photography.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">PHOTOGRAPHY</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">CONTACT</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-content" style="max-width:4000px; margin-top:46px">
+
+  <!-- Banner -->
+  <div class="header w3-center">
+    <img src="images/banner.jpg" style="width:100%" alt="Benji Stiles Banner">
+  </div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="w3-container w3-content w3-padding-64" style="max-width:800px">
+  <h2 class="w3-wide w3-center">CONTACT</h2>
+  
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col m6 w3-large w3-margin-bottom">
+      <i class="fa fa-map-marker" style="width:30px"></i> Anderson SC, US<br>
+      <i class="fa fa-envelope" style="width:30px"></i> Email: benjistilesmusic@gmail.com<br>
+      
+      <!-- Services List -->
+      <h3 style="margin-top: 1.5em; color: #f0c987;">Services:</h3>
+      <ul style="list-style-type: disc; margin-left: 20px; color: #f0c987; font-size: 1rem;">
+        <li>Live Performances: electric and upright bass, percussion, drumset</li>
+        <li>Recording and Mixing: studio sessions or live recordings</li>
+        <li>Tour support: merch, guitar tech, bass tech, drum tech</li>
+        <li>Production/consultation: creation of instrumentals and lead sheets</li>
+        <li>Music Composition: full scores and a high-quality file of the MIDI playback</li>
+        <li>Arranging: parts for pop/rock bands, horn sections, and small chamber ensembles</li>
+        <li>Photography: portraits (traditional or stylized), more available upon request</li>
+      </ul>
+    </div>
+    
+    <div class="w3-col m6">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPmKtZlle5qYdy49YSqR43WhV0vlLFxM4ovc8WLxdU5jvv2Q/viewform?embedded=true" width="100%" height="950" frameborder="0">Loading…</iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge custom-footer">
+  <a href="https://www.facebook.com/profile.php?id=100078161373243"><i class="fab fa-facebook w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/benjistilesmusic/"><i class="fab fa-instagram w3-hover-opacity"></i></a>
+  <a href="https://www.linkedin.com/in/benji-stiles-345a06284/"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+</footer>
+
+<!-- Modal -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
+
+<!-- Scripts -->
+<script>
+function toggleNav() {
+  document.getElementById("navDemo").classList.toggle("w3-show");
+}
+
+  // Close modal when clicking outside the modal content
+  document.getElementById('imgModal').addEventListener('click', function(event) {
+    // If the clicked target is the modal itself (not the image or caption), close it
+    if (event.target === this) {
+      closeModal();
+    }
+  });
+
+function openModal(img) {
+  document.getElementById('imgModal').style.display = "block";
+  document.getElementById('modalImg').src = img.src;
+}
+
+function closeModal() {
+  document.getElementById('imgModal').style.display = "none";
+}
+</script>
+
+</body>
+</html>
