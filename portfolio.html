@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Benji Stiles Music</title>
+    <link rel="icon" type="image/png" href="images/Logo%20copy%20transparent.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+          <img class="logo" src="images/logo.png">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="portfolio-intro">
+            <h1 class="section-title">Portfolio</h1>
+            <p>Highlights of my work as a performer and session musician.</p>
+        </section>
+
+<!----  VIDEO CONTENT REMOVED, MAY RE-ADD IN FUTURE
+        <section class="media-section">
+            <h3>Video Content</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <video controls poster="images/ComboWide.jpg">
+                        <source src="videos/20250429_211459.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="desc"><b>Live Performance Compilation</b></p>
+                </div>
+            </div>
+        </section>
+-->
+        <section class="media-section">
+            <h3>Gallery</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/headshotperforming.jpg" alt="Benji Stiles performing on upright bass">
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/blur.jpg" alt="Stylized photo of Benji Stiles performing">
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/BigBandWide.jpg" alt="Benji Stiles performing with the AU Big Band">
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/uprightportrait.jpg" alt="Benji playing upright bass">
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/houseshow.jpg" alt="Photo from a house show performance">
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/timpani.jpg" alt="Benji Stiles playing timpani with the Anderson Symphony Orchestra">
+                </div>
+                <!---
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/DSC_0155-2.jpg" alt="In the Studio">
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
+                    <img src="images/Cairn.JPG" alt="Benji Stiles Profile">
+                </div>
+              -->
+            </div>
+        </section>
+
+        <section class="media-section">
+            <h3>Audio</h3>
+            <div class="tracklist-container">
+                <div class="tracklist-item">
+                    <span class="track-number">01</span>
+                    <div class="track-info">
+                        <span class="track-title">Bye Bye Blackbird</span>
+                        <span class="track-desc">Benji Stiles and Harper Krimm</span>
+                    </div>
+                    <div class="track-player">
+                        <audio controls src="audio/blackbirdduet.mp3" controlsList="nodownload"></audio>
+                    </div>
+                </div>
+                <div class="tracklist-item">
+                    <span class="track-number">02</span>
+                    <div class="track-info">
+                        <span class="track-title">Isn't It Romantic?</span>
+                        <span class="track-desc">Luke Smith Quartet</span>
+                    </div>
+                    <div class="track-player">
+                        <audio controls src="audio/isntitromantic.mp3" controlsList="nodownload"></audio>
+                    </div>
+                </div>
+                <div class="tracklist-item">
+                    <span class="track-number">03</span>
+                    <div class="track-info">
+                        <span class="track-title">Cheek to Cheek</span>
+                        <span class="track-desc">AU Jazz Combo</span>
+                    </div>
+                    <div class="track-player">
+                        <audio controls src="audio/cheek2cheek.mp3" controlsList="nodownload"></audio>
+                    </div>
+                </div>
+                <div class="tracklist-item">
+                    <span class="track-number">04</span>
+                    <div class="track-info">
+                        <span class="track-title">Tryin' Times (Roberta Fleck)</span>
+                        <span class="track-desc">AU Jazz Combo</span>
+                    </div>
+                    <div class="track-player">
+                        <audio controls src="audio/tryintimes.mp3" controlsList="nodownload"></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <section class="media-section">
+        <h3>Session Work</h3>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3G8WDB8cTggKiFuu04pPmT?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5AJ7X97vvG1sS9RcybGpzx?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6vQLJHzbVG3RFuvGEfxNBm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/640wggtOTAlTpmWX60Cvlo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+
+    </main>
+
+    <!-- Modal for Gallery -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/benjistilesmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2026 Benji Stiles. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Ensure only one audio track plays at a time
+        const audios = document.querySelectorAll('audio');
+        audios.forEach(audio => {
+            audio.addEventListener('play', () => {
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                    }
+                });
+            });
+        });
+
+        function openModal(img) {
+            const modal = document.getElementById('imgModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById('imgModal').style.display = "none";
+        }
+    </script>
+</body>
+</html>
