@@ -24,7 +24,7 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="responsive-wrapper container">
         <section class="contact-wrapper">
             <h1 class="section-title">Get In Touch</h1>
             <p>Available for performances, studio sessions, sound engineering, and composition projects.</p>
@@ -41,7 +41,10 @@
 
             <p>For inquiries regarding booking or collaboration, please use the form below.</p>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPmKtZlle5qYdy49YSqR43WhV0vlLFxM4ovc8WLxdU5jvv2Q/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </main>
+            <div class="gform-embed-wrap">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPmKtZlle5qYdy49YSqR43WhV0vlLFxM4ovc8WLxdU5jvv2Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" class="gform-iframe" scrolling="yes">Loading…</iframe>
+            </div>
+        </main>
 
     <footer>
         <div class="footer-socials">
@@ -59,37 +62,6 @@
         navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-    </script>
-    <script>
-    // Toggle loading the Google Form iframe inline
-    (function(){
-        const toggleBtn = document.getElementById('toggleGForm');
-        const gformContainer = document.getElementById('gformContainer');
-        const gformIframe = document.getElementById('gformIframe');
-        const card = document.querySelector('.gform-card');
-
-        if(!toggleBtn || !gformContainer || !gformIframe || !card) return;
-
-        toggleBtn.addEventListener('click', function(){
-            const isActive = gformContainer.classList.contains('active');
-            if(isActive){
-                gformContainer.classList.remove('active');
-                gformContainer.setAttribute('aria-hidden','true');
-                toggleBtn.textContent = 'Show Form Inline';
-                // unload iframe to save resources
-                gformIframe.src = 'about:blank';
-            } else {
-                // load iframe from data-src
-                const src = gformIframe.getAttribute('data-src') || card.dataset.gform;
-                gformIframe.src = src;
-                gformContainer.classList.add('active');
-                gformContainer.setAttribute('aria-hidden','false');
-                toggleBtn.textContent = 'Hide Form';
-                // scroll into view on small screens
-                setTimeout(()=> gformContainer.scrollIntoView({behavior:'smooth', block:'start'}), 200);
-            }
-        });
-    })();
     </script>
 </body>
 </html>
