@@ -17,6 +17,7 @@
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
+            <a href="shows.html">Shows</a>
             <a href="contact.html" class="active">Contact</a>
         </div>
         <div class="nav-toggle" id="navToggle">
@@ -26,11 +27,8 @@
 
     <main class="responsive-wrapper container">
         <section class="contact-wrapper">
-            <h1 class="section-title">Get In Touch</h1>
-            <p>Available for performances, studio sessions, sound engineering, and composition projects.</p>
-            
+            <h1 class="section-title">Services</h1>
             <div class="services-list">
-                <h3>Services</h3>
                 <ul>
                     <li><span>Live performances (electric & upright bass, drums & percussion)</span> <i class="fas fa-check"></i></li>
                     <li><span>Studio work (electric & upright bass, percussion)</span> <i class="fas fa-check"></i></li>
@@ -66,6 +64,12 @@
 
         navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
     </script>
 </body>

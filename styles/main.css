@@ -42,7 +42,7 @@ body {
 
 h1, h2, h3, .brand {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
 }
 
@@ -212,6 +212,178 @@ ul {
     color: var(--text-primary);
 }
 
+.shows-section {
+    padding: 20px 0 20px;
+}
+
+.show-copy {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.show-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.show-list {
+    display: grid;
+    gap: 18px;
+}
+
+.show-item,
+.show-empty {
+    background: var(--section-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 22px 24px;
+    transition: var(--transition);
+}
+
+.show-item {
+    cursor: pointer;
+}
+
+.show-item:hover,
+.show-item:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(137, 189, 136, 0.4);
+}
+
+.show-item time {
+    display: block;
+    margin-bottom: 0.15rem;
+    color: var(--text-secondary);
+    font-size: 1.75rem;
+}
+
+.show-item h3 {
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+    font-size: 1.30rem;
+}
+
+.show-item .show-details {
+    color: var(--text-secondary);
+    line-height: 1.25;
+}
+
+.show-empty p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.today-barrier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.20rem;
+    letter-spacing: 0.50em;
+    text-transform: uppercase;
+}
+
+.today-barrier::before,
+.today-barrier::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.today-barrier span:last-child {
+    color: var(--text-primary);
+}
+
+.show-card {
+    position: relative;
+    background: var(--section-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 24px;
+    transition: var(--transition);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.show-card-inner {
+    padding: 0 56px;
+}
+
+.show-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.show-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.show-nav:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--accent-color);
+}
+
+.show-prev {
+    left: 16px;
+}
+
+.show-next {
+    right: 16px;
+}
+
+.show-label {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.show-card time {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.show-card h3 {
+    margin-bottom: 0.85rem;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+}
+
+.show-details {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.show-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
 /* Portfolio Page Styles */
 .portfolio-intro {
     text-align: center;
@@ -228,6 +400,93 @@ ul {
     color: var(--accent-color);
     border-left: 3px solid var(--accent-color);
     padding-left: 15px;
+}
+
+.songlink-card {
+    display: block;
+    width: 100%;
+    padding: 24px 28px;
+    margin-top: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.songlink-card:hover {
+    border-color: rgba(137, 189, 136, 0.8);
+    background: rgba(137, 189, 136, 0.08);
+}
+
+.songlink-inner {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.songlink-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+}
+
+.spotify-embed-card {
+    margin-top: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.spotify-embed-card iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+.spotify-action {
+    display: block;
+    width: 100%;
+    padding: 16px 18px;
+    text-align: center;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.spotify-action:hover {
+    opacity: 0.95;
+}
+
+.songlink-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.songlink-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.songlink-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 0.75rem;
+    padding: 10px 18px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .portfolio-grid {
@@ -503,29 +762,114 @@ footer {
     display: none;
     position: fixed;
     z-index: 2000;
-    top: 0;
-    left: 0;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.modal-dialog {
+    position: relative;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    padding-top: 100px;
+    max-width: 720px;
+    z-index: 1;
 }
 
 .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80vh;
+    background: var(--section-bg);
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    color: var(--text-secondary);
 }
 
-.close {
+.modal-close {
     position: absolute;
-    top: 30px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+    font-size: 30px;
+    line-height: 1;
+    border-radius: 50%;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.modal-header h2 {
+    margin: 0.5rem 0 0.5rem;
+    color: var(--text-primary);
+    font-size: 2rem;
+}
+
+.modal-header time {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.modal-body {
+    margin-top: 1.5rem;
+}
+
+.modal-section {
+    margin-top: 20px;
+}
+
+.modal-section h3 {
+    margin: 0 0 0.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.modal-section p,
+.modal-section ul {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.personnel-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.personnel-list li {
+    margin: 0 0 0.2rem 0;
+    padding-left: 0.55rem;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.personnel-list li::before {
+    content: '-';
+    position: relative;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1rem;
+    line-height: 1;
 }
 
 /* Animations */
@@ -564,6 +908,39 @@ footer {
 
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .show-card {
+        padding: 24px 18px;
+    }
+
+    .show-card-inner {
+        padding: 0;
+    }
+
+    .show-nav {
+        width: 32px;
+        height: 32px;
+    }
+
+    .show-prev {
+        left: 12px;
+    }
+
+    .show-next {
+        right: 12px;
+    }
+
+    .modal {
+        padding-top: 0;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    .modal-content {
+        padding: 24px;
     }
 
     .about-grid {

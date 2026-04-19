@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows | Benji Stiles</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+          <img class="logo" src="images/logo.png">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="shows.html" class="active">Shows</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="shows" class="shows-section">
+            <div class="show-list" id="showList" aria-live="polite"></div>
+        </section>
+
+        <div id="showModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="modal-backdrop"></div>
+            <div class="modal-dialog">
+                <button class="modal-close" aria-label="Close show details">&times;</button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="show-label" id="modalCategoryLabel"></span>
+                        <h2 id="modalTitle"></h2>
+                        <time id="modalDate"></time>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalDetails" class="show-details"></p>
+                        <div class="modal-section">
+                            <h3>Personnel</h3>
+                            <p id="modalPersonnel">Band members and collaborators go here.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h3>Address</h3>
+                            <p id="modalAddress">Venue address or location details.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h3>Notes</h3>
+                            <p id="modalNotes">Additional show information can be added here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/benjistilesmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2026 Benji Stiles. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        const showData = [
+            {
+                date: 'May 15, 2026',
+                datetime: '2026-05-15',
+                startTime: '7:00 PM',
+                title: 'Grey and Gray @ Poe Mill',
+                details: 'Poe Mill Music • Jazz Fusion',
+                personnel: 'Evan Grey – guitar, drums; Dalvin Gray – drums; Michael Ford – guitar; Nathan Fowler – guitar; Harper Krimm – vocals; Silas Cain – vocals; Benji Stiles – bass;',
+                address: '904 Pinckney St, Greenville, SC 29609',
+            },
+            {
+                date: 'May 3, 2026',
+                datetime: '2026-05-03',
+                startTime: '3:00 PM',
+                title: 'Anderson Symphony Orchestra - Happy 250th, USA!',
+                details: 'Henderson Auditorium',
+                notes: "Celebrate America’s 250th birthday with a rousing symphony concert filled patriotic favorites, honoring the nation’s journey through sound. Tickets available at the door or by phone at (864)-231-6147."
+            },
+            {
+                date: 'April 25, 2026',
+                datetime: '2026-04-25',
+                startTime: '7:00 PM',
+                title: 'Blackwood Jazz',
+                details: 'Entre Nous',
+                address: 'Maestro Bistro & Dinner Club 104 S Main St, Unit 105, Greenville, SC 29601',
+                notes: "Come on out and really see what is 'behind the bookcase' at Greenville's most unique speakeasy! Please call (864)-248-0702 to make your reservations. Proper attire highly encouraged, ages 21+."
+            },
+            {
+                date: 'April 29, 2026',
+                datetime: '2026-04-29',
+                startTime: '7:00 PM',
+                title: 'AU Jazz Combo',
+                details: 'Daniel Recital Hall',
+                personnel: 'Harper Krimm – vocals; Dalvin Gray – drums; Nathan Freeman – trumpet; Logan Burgess – alto & soprano sax; Rose Wilson – piano; Max Dubnick – guitar; Benji Stiles – bass',
+                notes: "The Anderson University Jazz Combo will be performing a set of swingin' tunes in the Daniel Recital Hall as part of the Anderson University Concert Series. Free and open to the public!"
+            },
+            {
+                date: 'April 25, 2026',
+                datetime: '2026-04-25',
+                startTime: '12:00 PM',
+                title: 'AU Jazz Combo @ Soirée',
+                details: 'SCSA Soirée Stage',
+                personnel: 'Harper Krimm – vocals; Dalvin Gray – drums; Nathan Freeman – trumpet; Logan Burgess – alto & soprano sax; Rose Wilson – piano; Max Dubnick – guitar; Benji Stiles – bass',
+                address: 'SCSA Soirée Stage, Downtown Anderson, SC',
+                notes: "The Anderson University Jazz Combo will be performing a set of swingin' tunes at the Annual Anderson Soirée. Free and open to the public- come on out and enjoy the festivities!"
+            },
+            {
+                date: 'April 24, 2026',
+                datetime: '2026-04-24',
+                startTime: '6:00 PM',
+                title: 'Songwriter Showcase: Audio 316 Records',
+                details: 'SCSA Soirée Stage',
+                personnel: 'Harper Krimm – vocals; Benji Stiles – bass',
+                address: 'SCSA Soirée Stage, Downtown Anderson, SC',
+                notes: 'A showcase of original music from Audio 316 Records at the Annual Anderson Soirée. Benji will be performing with the songwriter and vocalist Harper Krimm. Free and open to the public!'
+            },
+            {
+                date: 'April 18, 2026',
+                datetime: '2026-04-18',
+                startTime: '3:00 PM',
+                title: 'Nathan Freeman and The Horn Brothers',
+                details: 'Daniel Recital Hall • Jazz/Fusion, Classical',
+                personnel: 'Janice Wright – piano; Nathan Freeman – trumpet; Rose Wilson – piano; Olivia Burdette – organ; Benji Stiles – bass; Dalvin Gray – drums; Evan Grey – guitar;',
+                address: 'Daniel Recital Hall, Anderson University, Anderson, SC',
+                notes: 'A showcase of the work from the wonderful trumpeter, Nathan Freeman. Free and open to the public!'
+            },
+            {
+                date: 'April 19, 2026',
+                datetime: '2026-04-19',
+                startTime: '7:30 PM',
+                title: 'Grey and Gray',
+                details: 'Daniel Recital Hall • Jazz Fusion',
+                personnel: 'Evan Grey – guitar, drums; Dalvin Gray – drums; Michael Ford – guitar; Nathan Fowler – guitar; Harper Krimm – vocals; Silas Cain – vocals; Benji Stiles – bass;',
+                address: 'Daniel Recital Hall, Anderson University, Anderson, SC',
+                notes: 'Free and open to the public!'
+            },
+            {
+                date: 'April 10, 2026',
+                datetime: '2026-04-10',
+                startTime: '8:00 PM',
+                title: "Anderson University President's Gala (Night 1)",
+                details: 'Henderson Auditorium',
+                notes: "Tickets available at the door."
+            },
+            {
+                date: 'April 11, 2026',
+                datetime: '2026-04-11',
+                startTime: '8:00 PM',
+                title: "Anderson University President's Gala (Night 2)",
+                details: 'Henderson Auditorium',
+                notes: "Tickets available at the door."
+            },
+        ];
+
+        const today = new Date();
+        today.setHours(0,0,0,0);
+
+        const showList = document.getElementById('showList');
+        const modal = document.getElementById('showModal');
+        const modalCategoryLabel = document.getElementById('modalCategoryLabel');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDate = document.getElementById('modalDate');
+        const modalBody = document.querySelector('.modal-body');
+        const modalClose = document.querySelector('.modal-close');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+
+        function parseStartTimeTo24(startTime) {
+            const match = String(startTime).match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
+            if (!match) {
+                return '23:59';
+            }
+            let hour = Number(match[1]);
+            const minute = Number(match[2] || '0');
+            const meridiem = match[3].toUpperCase();
+            if (meridiem === 'PM' && hour !== 12) hour += 12;
+            if (meridiem === 'AM' && hour === 12) hour = 0;
+            return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        }
+
+        function getShowStartDateTime(show) {
+            const time24 = parseStartTimeTo24(show.startTime || show.details);
+            return new Date(`${show.datetime}T${time24}:00`);
+        }
+
+        const now = new Date();
+        const sortedShows = showData
+            .map(show => ({ ...show, showStartDateTime: getShowStartDateTime(show) }))
+            .sort((a, b) => a.showStartDateTime - b.showStartDateTime);
+
+        const pastShows = sortedShows.filter(show => show.showStartDateTime < now);
+        const upcomingShows = sortedShows.filter(show => show.showStartDateTime >= now);
+
+        function formatPersonnelList(personnel) {
+            const parts = (personnel || '')
+                .split(';')
+                .map(item => item.trim())
+                .filter(Boolean);
+
+            if (!parts.length) {
+                return null;
+            }
+
+            const items = parts.map(item => `<li>${item}</li>`).join('');
+            return `<div class="modal-section"><h3>Personnel</h3><ul class="personnel-list">${items}</ul></div>`;
+        }
+
+        function createModalSection(title, content) {
+            return `<div class="modal-section"><h3>${title}</h3><p>${content}</p></div>`;
+        }
+
+        function getEventDetailsText(show) {
+            const details = show.details ? show.details.trim() : '';
+            if (show.startTime && details) {
+                return `${show.startTime} • ${details}`;
+            }
+            return show.startTime || details || '';
+        }
+
+        function openShowModal(category, index) {
+            const show = category === 'upcoming' ? upcomingShows[index] : pastShows[index];
+            if (!show) return;
+            modalCategoryLabel.textContent = category === 'upcoming' ? 'Upcoming' : 'Past';
+            modalTitle.textContent = show.title;
+            modalDate.textContent = show.date;
+
+            let bodyHtml = `<p class="show-details">${getEventDetailsText(show)}</p>`;
+
+            const personnelHtml = formatPersonnelList(show.personnel);
+            if (personnelHtml) {
+                bodyHtml += personnelHtml;
+            }
+
+            if (show.address && show.address.trim()) {
+                bodyHtml += createModalSection('Address', show.address);
+            }
+
+            if (show.notes && show.notes.trim()) {
+                bodyHtml += createModalSection('Notes', show.notes);
+            }
+
+            modalBody.innerHTML = bodyHtml;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        function createShowItem(show, category, index) {
+            const article = document.createElement('article');
+            article.className = 'show-item';
+            article.tabIndex = 0;
+            article.dataset.category = category;
+            article.dataset.index = index;
+
+            article.innerHTML = `
+                <span class="show-label">${category === 'upcoming' ? 'Upcoming' : 'Past'}</span>
+                <time datetime="${show.datetime}">${show.date}</time>
+                <h3>${show.title}</h3>
+                <p class="show-details">${getEventDetailsText(show)}</p>
+            `;
+
+            article.addEventListener('click', () => openShowModal(category, index));
+            article.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openShowModal(category, index);
+                }
+            });
+
+            return article;
+        }
+
+        function createEmptyState(message) {
+            const emptyItem = document.createElement('div');
+            emptyItem.className = 'show-empty';
+            emptyItem.innerHTML = `<p>${message}</p>`;
+            return emptyItem;
+        }
+
+        function createTodayBarrier() {
+            const barrier = document.createElement('div');
+            barrier.className = 'today-barrier';
+            const formattedToday = today.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            });
+            barrier.innerHTML = `<span>Today</span><span>${formattedToday}</span>`;
+            return barrier;
+        }
+
+        function renderShowList() {
+            showList.innerHTML = '';
+
+            if (pastShows.length) {
+                pastShows.forEach((show, index) => {
+                    showList.appendChild(createShowItem(show, 'past', index));
+                });
+            } else {
+                showList.appendChild(createEmptyState('No past shows are available yet.'));
+            }
+
+            showList.appendChild(createTodayBarrier());
+
+            if (upcomingShows.length) {
+                upcomingShows.forEach((show, index) => {
+                    showList.appendChild(createShowItem(show, 'upcoming', index));
+                });
+            } else {
+                showList.appendChild(createEmptyState('No upcoming shows are scheduled at this time.'));
+            }
+        }
+
+        renderShowList();
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -17,6 +17,7 @@
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="shows.html">Shows</a>
             <a href="contact.html">Contact</a>
         </div>
         <div class="nav-toggle" id="navToggle">
@@ -25,10 +26,7 @@
     </nav>
 
     <main class="container">
-        <section class="portfolio-intro">
-            <h1 class="section-title">Portfolio</h1>
-            <p>Highlights of my work as a performer and session musician.</p>
-        </section>
+
 
 <!----  VIDEO CONTENT REMOVED, MAY RE-ADD IN FUTURE
         <section class="media-section">
@@ -124,9 +122,15 @@
       <section class="media-section">
         <h3>Session Work</h3>
           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3G8WDB8cTggKiFuu04pPmT?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fastronautauthenticity&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5AJ7X97vvG1sS9RcybGpzx?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Ftideianclark&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6vQLJHzbVG3RFuvGEfxNBm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fkfcv47gdz05sz&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/640wggtOTAlTpmWX60Cvlo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Ftowhomitmayconcern&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4UweaGP2JLx1j20oCroMEK?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fmercyhunterbradley&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
         </section>
 
     </main>
@@ -152,6 +156,12 @@
 
         navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
 
         // Ensure only one audio track plays at a time
