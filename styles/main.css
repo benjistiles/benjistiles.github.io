@@ -272,6 +272,48 @@ ul {
     line-height: 1.25;
 }
 
+.modal-header {
+    position: relative;
+}
+
+.modal-calendar-btn {
+    position: absolute;
+    top: 18px;
+    right: 72px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(137, 189, 136, 0.25);
+    background: rgba(137, 189, 136, 0.08);
+    color: var(--text-primary);
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-calendar-btn i {
+    font-size: 1rem;
+}
+
+@media (max-width: 520px) {
+    .modal-calendar-btn {
+        top: 72px;
+        right: 18px;
+    }
+}
+
+.modal-calendar-btn:hover,
+.modal-calendar-btn:focus-visible {
+    color: var(--accent-color);
+    background: rgba(137, 189, 136, 0.16);
+    border-color: rgba(137, 189, 136, 0.45);
+}
+
 .show-empty p {
     margin: 0;
     color: var(--text-secondary);
