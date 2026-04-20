@@ -90,7 +90,7 @@
                 datetime: '2026-05-15',
                 startTime: '7:00 PM',
                 title: 'Grey and Gray @ Poe Mill',
-                details: 'Poe Mill Music • Jazz Fusion',
+                details: 'Poe Mill Music • Jazz Fusion • $15 cover',
                 personnel: 'Evan Grey – guitar, drums; Dalvin Gray – drums; Michael Ford – guitar; Nathan Fowler – guitar; Harper Krimm – vocals; Silas Cain – vocals; Benji Stiles – bass;',
                 address: '904 Pinckney St, Greenville, SC 29609',
             },
@@ -106,7 +106,7 @@
                 date: 'April 25, 2026',
                 datetime: '2026-04-25',
                 startTime: '7:00 PM',
-                title: 'Blackwood Jazz',
+                title: 'Blackwood Jazz @ Entre Nous',
                 details: 'Entre Nous',
                 address: 'Maestro Bistro & Dinner Club 104 S Main St, Unit 105, Greenville, SC 29601',
                 notes: "Come on out and really see what is 'behind the bookcase' at Greenville's most unique speakeasy! Please call (864)-248-0702 to make your reservations. Proper attire highly encouraged, ages 21+."
@@ -161,21 +161,15 @@
                 notes: 'Free and open to the public!'
             },
             {
-                date: 'April 10, 2026',
-                datetime: '2026-04-10',
-                startTime: '8:00 PM',
-                title: "Anderson University President's Gala (Night 1)",
-                details: 'Henderson Auditorium',
-                notes: "Tickets available at the door."
+                date: 'May 22, 2026',
+                datetime: '2026-05-22',
+                endDate: 'May 24, 2026',
+                endDatetime: '2026-05-24',
+                title: 'Audio 316 Recording Sessions',
+                address: 'Nashville, TN',
+                notes: "I'll be traveling to Nashville to record with a couple of great musicians and friends. We'll be working on some original music and covers for release later this year. Follow along on social media for updates and sneak peeks from the studio!"
             },
-            {
-                date: 'April 11, 2026',
-                datetime: '2026-04-11',
-                startTime: '8:00 PM',
-                title: "Anderson University President's Gala (Night 2)",
-                details: 'Henderson Auditorium',
-                notes: "Tickets available at the door."
-            },
+
         ];
 
         const today = new Date();
@@ -210,13 +204,54 @@
             return new Date(`${show.datetime}T${time24}:00`);
         }
 
+        function getShowEndDateTime(show) {
+            if (show.endDatetime) {
+                const time24 = parseStartTimeTo24(show.startTime || show.details);
+                return new Date(`${show.endDatetime}T${time24}:00`);
+            }
+            return getShowStartDateTime(show);
+        }
+
         const now = new Date();
         const sortedShows = showData
-            .map(show => ({ ...show, showStartDateTime: getShowStartDateTime(show) }))
-            .sort((a, b) => a.showStartDateTime - b.showStartDateTime);
+            .map(show => ({ ...show, showStartDateTime: getShowStartDateTime(show), showEndDateTime: getShowEndDateTime(show) }))
+            .sort((a, b) => a.showEndDateTime - b.showEndDateTime);
 
-        const pastShows = sortedShows.filter(show => show.showStartDateTime < now);
-        const upcomingShows = sortedShows.filter(show => show.showStartDateTime >= now);
+        const pastShows = sortedShows.filter(show => show.showEndDateTime < now);
+        const upcomingShows = sortedShows.filter(show => show.showEndDateTime >= now);
+
+        function getShowStatus(show) {
+            const fourHoursInMs = 4 * 60 * 60 * 1000;
+            const timeSinceStart = now - show.showStartDateTime;
+            const timeUntilEnd = show.showEndDateTime - now;
+
+            if (show.endDatetime) {
+                const startDate = new Date(show.datetime);
+                const endDate = new Date(show.endDatetime);
+                if (today >= startDate && today <= endDate) {
+                    return 'now';
+                }
+            }
+
+            // Show has started but end hasn't passed
+            if (timeSinceStart >= 0) {
+                // Check if we're within 4 hours of the end time
+                if (timeUntilEnd >= 0 && timeUntilEnd <= fourHoursInMs) {
+                    return 'now';
+                }
+                // If show has ended, but less than 4 hours have passed since it ended
+                if (timeUntilEnd < 0 && Math.abs(timeUntilEnd) <= fourHoursInMs) {
+                    return 'now';
+                }
+
+            }
+
+            return show.showEndDateTime < now ? 'past' : 'upcoming';
+        }
+
+        const nowShows = sortedShows.filter(show => getShowStatus(show) === 'now');
+        const pastShowsFiltered = sortedShows.filter(show => getShowStatus(show) === 'past');
+        const upcomingShowsFiltered = sortedShows.filter(show => getShowStatus(show) === 'upcoming');
 
         function formatPersonnelList(personnel) {
             const parts = (personnel || '')
@@ -245,19 +280,24 @@
         }
 
         function formatIcsDate(show, end = false) {
-            const date = show.datetime.replace(/-/g, '');
-            if (!show.startTime) {
-                return `${date}`;
-            }
-            const time24 = parseStartTimeTo24(show.startTime).replace(':', '');
-            if (end) {
+            let dateStr, timeStr;
+            
+            if (end && show.endDatetime) {
+                dateStr = show.endDatetime.replace(/-/g, '');
+                const time24 = parseStartTimeTo24(show.startTime).replace(':', '');
                 const hour = Number(time24.slice(0, 2));
                 const minute = Number(time24.slice(2));
-                const dateObj = new Date(`${show.datetime}T${time24.slice(0,2)}:${time24.slice(2)}:00`);
+                const dateObj = new Date(`${show.endDatetime}T${time24.slice(0,2)}:${time24.slice(2)}:00`);
                 dateObj.setMinutes(dateObj.getMinutes() + 90);
                 return dateObj.toISOString().replace(/[-:]/g, '').split('.')[0];
             }
-            return `${date}T${time24}00`;
+            
+            dateStr = show.datetime.replace(/-/g, '');
+            if (!show.startTime) {
+                return `${dateStr}`;
+            }
+            const time24 = parseStartTimeTo24(show.startTime).replace(':', '');
+            return `${dateStr}T${time24}00`;
         }
 
         function sanitizeIcsText(value) {
@@ -291,13 +331,23 @@
             setTimeout(() => URL.revokeObjectURL(url), 1000);
         }
 
-        function openShowModal(category, index) {
-            const show = category === 'upcoming' ? upcomingShows[index] : pastShows[index];
+        function openShowModal(status, index) {
+            let show;
+            if (status === 'now') {
+                show = nowShows[index];
+            } else if (status === 'past') {
+                show = pastShowsFiltered[index];
+            } else {
+                show = upcomingShowsFiltered[index];
+            }
             if (!show) return;
             activeCalendarShow = show;
-            modalCategoryLabel.textContent = category === 'upcoming' ? 'Upcoming' : 'Past';
+            
+            const statusDisplay = status === 'now' ? 'Now' : (status === 'past' ? 'Past' : 'Upcoming');
+            modalCategoryLabel.textContent = statusDisplay;
             modalTitle.textContent = show.title;
-            modalDate.textContent = show.date;
+            const dateDisplay = show.endDate ? `${show.date} – ${show.endDate}` : show.date;
+            modalDate.textContent = dateDisplay;
             modalCalendarBtn.disabled = false;
 
             let bodyHtml = `<p class="show-details">${getEventDetailsText(show)}</p>`;
@@ -325,25 +375,28 @@
             modal.setAttribute('aria-hidden', 'true');
         }
 
-        function createShowItem(show, category, index) {
+        function createShowItem(show, status, index) {
             const article = document.createElement('article');
             article.className = 'show-item';
             article.tabIndex = 0;
-            article.dataset.category = category;
+            article.dataset.status = status;
             article.dataset.index = index;
 
+            const dateDisplay = show.endDate ? `${show.date} – ${show.endDate}` : show.date;
+            const statusDisplay = status === 'now' ? 'Now' : (status === 'past' ? 'Past' : 'Upcoming');
+
             article.innerHTML = `
-                <span class="show-label">${category === 'upcoming' ? 'Upcoming' : 'Past'}</span>
-                <time datetime="${show.datetime}">${show.date}</time>
+                <span class="show-label">${statusDisplay}</span>
+                <time datetime="${show.datetime}">${dateDisplay}</time>
                 <h3>${show.title}</h3>
                 <p class="show-details">${getEventDetailsText(show)}</p>
             `;
 
-            article.addEventListener('click', () => openShowModal(category, index));
+            article.addEventListener('click', () => openShowModal(status, index));
             article.addEventListener('keydown', event => {
                 if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault();
-                    openShowModal(category, index);
+                    openShowModal(status, index);
                 }
             });
 
@@ -372,8 +425,9 @@
         function renderShowList() {
             showList.innerHTML = '';
 
-            if (pastShows.length) {
-                pastShows.forEach((show, index) => {
+            // Past shows (filtered to exclude "now" and upcoming)
+            if (pastShowsFiltered.length) {
+                pastShowsFiltered.forEach((show, index) => {
                     showList.appendChild(createShowItem(show, 'past', index));
                 });
             } else {
@@ -382,8 +436,16 @@
 
             showList.appendChild(createTodayBarrier());
 
-            if (upcomingShows.length) {
-                upcomingShows.forEach((show, index) => {
+            // Now shows (started recently or within the 4-hour window)
+            if (nowShows.length) {
+                nowShows.forEach((show, index) => {
+                    showList.appendChild(createShowItem(show, 'now', index));
+                });
+            }
+
+            // Upcoming shows (filtered to exclude "now")
+            if (upcomingShowsFiltered.length) {
+                upcomingShowsFiltered.forEach((show, index) => {
                     showList.appendChild(createShowItem(show, 'upcoming', index));
                 });
             } else {
