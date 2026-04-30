@@ -93,6 +93,8 @@
                 details: 'Poe Mill Music • Jazz Fusion • $15 cover • ft. The Evan Grey Band',
                 personnel: 'Evan Grey – guitar, drums; Dalvin Gray – drums; Michael Ford – guitar; Nathan Fowler – guitar; Harper Krimm – vocals; Silas Cain – vocals; Benji Stiles – bass;',
                 address: '904 Pinckney St, Greenville, SC 29609',
+                notes: "Dalvin Gray is a drummer and instrumentalist based in Anderson, South Carolina. He has performed with a variety of musicians and was selected to play in the North Charleston Jazz Festival. Dalvin has also opened for Earth, Wind & Fire and performed internationally at the JAM Music Lab in Vienna, Austria.",
+                links: '<u><a href="https://poemillmusic.com/events/dalvin-gray-and-evan-grey/">Purchase tickets here!</a>'
             },
             {
                 date: 'May 3, 2026',
@@ -343,6 +345,10 @@
 
             if (show.notes && show.notes.trim()) {
                 bodyHtml += createModalSection('Notes', show.notes);
+            }
+
+            if (show.links && show.links.trim()) {
+                bodyHtml += createModalSection('Links', show.links);
             }
 
             modalBody.innerHTML = bodyHtml;
