@@ -12,7 +12,7 @@
 
     <nav class="navbar">
         <div class="brand">
-          <img class="logo" src="images/logo.png">
+          <img class="logo" src="images/logo.png" alt="Benji Stiles">
         </div>
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
@@ -115,13 +115,16 @@
                 datetime: '2026-08-15',
                 endDate: 'August 16, 2026',
                 endDatetime: '2026-08-16',
-                title: 'Worship Service @ Parkview Church',
+                title: 'Worship Services @ Parkview Church',
                 address: 'Palm Coast, FL',
             },
             {
-                date: 'June 27, 2026',
-                datetime: '2026-06-27',
-                title: 'Private Event w/ Blackwood Jazz',
+                date: 'August 22, 2026',
+                datetime: '2026-08-22',
+                title: 'Private Event',
+                startTime: '04:00 PM',
+                endTime: '07:00 PM',
+                personnel: 'Olivia Van Goor - Vocals/Bandleader; Lisa Sung - Keys; Jeff Shoup - Drums; Benji Stiles - Bass',
             },
 
         ];
@@ -140,8 +143,8 @@
         const modalBackdrop = document.querySelector('.modal-backdrop');
         let activeCalendarShow = null;
 
-        function parseStartTimeTo24(startTime) {
-            const match = String(startTime).match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
+        function parseTimeTo24(time) {
+            const match = String(time).match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
             if (!match) {
                 return '23:59';
             }
@@ -154,14 +157,15 @@
         }
 
         function getShowStartDateTime(show) {
-            const time24 = parseStartTimeTo24(show.startTime || show.details);
+            const time24 = parseTimeTo24(show.startTime || show.details);
             return new Date(`${show.datetime}T${time24}:00`);
         }
 
         function getShowEndDateTime(show) {
-            if (show.endDatetime) {
-                const time24 = parseStartTimeTo24(show.startTime || show.details);
-                return new Date(`${show.endDatetime}T${time24}:00`);
+            if (show.endTime || show.endDatetime) {
+                const date = show.endDatetime || show.datetime;
+                const time24 = parseTimeTo24(show.endTime || show.startTime || show.details);
+                return new Date(`${date}T${time24}:00`);
             }
             return getShowStartDateTime(show);
         }
@@ -169,7 +173,7 @@
         const now = new Date();
         const sortedShows = showData
             .map(show => ({ ...show, showStartDateTime: getShowStartDateTime(show), showEndDateTime: getShowEndDateTime(show) }))
-            .sort((a, b) => a.showEndDateTime - b.showEndDateTime);
+            .sort((b, a) => a.showEndDateTime - b.showEndDateTime);
 
         const pastShows = sortedShows.filter(show => show.showEndDateTime < now);
         const upcomingShows = sortedShows.filter(show => show.showEndDateTime >= now);
@@ -227,30 +231,35 @@
 
         function getEventDetailsText(show) {
             const details = show.details ? show.details.trim() : '';
-            if (show.startTime && details) {
-                return `${show.startTime} • ${details}`;
+            const timeDisplay = show.startTime && show.endTime
+                ? `${show.startTime} - ${show.endTime}`
+                : show.startTime || '';
+            if (timeDisplay && details) {
+                return `${timeDisplay} • ${details}`;
             }
-            return show.startTime || details || '';
+            return timeDisplay || details || '';
         }
 
         function formatIcsDate(show, end = false) {
-            let dateStr, timeStr;
-            
+            const date = end ? (show.endDatetime || show.datetime) : show.datetime;
+            const dateStr = date.replace(/-/g, '');
+
+            if (end && show.endTime) {
+                const time24 = parseTimeTo24(show.endTime).replace(':', '');
+                return `${dateStr}T${time24}00`;
+            }
+
             if (end && show.endDatetime) {
-                dateStr = show.endDatetime.replace(/-/g, '');
-                const time24 = parseStartTimeTo24(show.startTime).replace(':', '');
-                const hour = Number(time24.slice(0, 2));
-                const minute = Number(time24.slice(2));
-                const dateObj = new Date(`${show.endDatetime}T${time24.slice(0,2)}:${time24.slice(2)}:00`);
+                const time24 = parseTimeTo24(show.startTime).replace(':', '');
+                const dateObj = new Date(`${show.endDatetime}T${time24.slice(0, 2)}:${time24.slice(2)}:00`);
                 dateObj.setMinutes(dateObj.getMinutes() + 90);
                 return dateObj.toISOString().replace(/[-:]/g, '').split('.')[0];
             }
-            
-            dateStr = show.datetime.replace(/-/g, '');
+
             if (!show.startTime) {
                 return `${dateStr}`;
             }
-            const time24 = parseStartTimeTo24(show.startTime).replace(':', '');
+            const time24 = parseTimeTo24(show.startTime).replace(':', '');
             return `${dateStr}T${time24}00`;
         }
 
@@ -383,17 +392,6 @@
         function renderShowList() {
             showList.innerHTML = '';
 
-            // Past shows (filtered to exclude "now" and upcoming)
-            if (pastShowsFiltered.length) {
-                pastShowsFiltered.forEach((show, index) => {
-                    showList.appendChild(createShowItem(show, 'past', index));
-                });
-            } else {
-                showList.appendChild(createEmptyState('No past shows are available yet.'));
-            }
-
-            showList.appendChild(createTodayBarrier());
-
             // Now shows (started recently or within the 4-hour window)
             if (nowShows.length) {
                 nowShows.forEach((show, index) => {
@@ -409,6 +407,20 @@
             } else {
                 showList.appendChild(createEmptyState('No upcoming shows are scheduled at this time.'));
             }
+
+            showList.appendChild(createTodayBarrier());
+
+            // Past shows (filtered to exclude "now" and upcoming)
+            if (pastShowsFiltered.length) {
+                pastShowsFiltered.forEach((show, index) => {
+                    showList.appendChild(createShowItem(show, 'past', index));
+                });
+            } else {
+                showList.appendChild(createEmptyState('No past shows are available yet.'));
+            }
+
+
+
         }
 
         renderShowList();

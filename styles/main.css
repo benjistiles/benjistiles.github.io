@@ -274,6 +274,7 @@ ul {
 
 .modal-header {
     position: relative;
+    padding-right: 110px;
 }
 
 .modal-calendar-btn {
@@ -302,8 +303,8 @@ ul {
 
 @media (max-width: 520px) {
     .modal-calendar-btn {
-        top: 72px;
-        right: 18px;
+        top: 18px;
+        right: 72px;
     }
 }
 
@@ -825,15 +826,18 @@ footer {
     position: relative;
     width: 100%;
     max-width: 95vw;
-    max-height: 95vh;
+    max-height: calc(100vh - 48px);
     z-index: 1;
 }
 
 .modal-content {
+    display: flex;
+    flex-direction: column;
     background: var(--section-bg);
     border-radius: 16px;
     padding: 16px;
-    max-height: 95vh;
+    max-height: inherit;
+    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
     color: var(--text-secondary);
@@ -878,9 +882,12 @@ footer {
 }
 
 .modal-body {
+    min-height: 0;
     margin-top: 1.5rem;
     margin-bottom: 0rem;
     padding-bottom: 0.0rem;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
 }
 
 .modal-section {
@@ -984,11 +991,12 @@ footer {
     }
 
     .modal {
-        padding-top: 0;
+        padding: 16px;
     }
 
     .modal-dialog {
         max-width: 90%;
+        max-height: calc(100vh - 32px);
     }
 
     .modal-content {
