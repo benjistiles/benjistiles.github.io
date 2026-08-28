@@ -677,8 +677,8 @@ ul {
 .gform-embed-wrap {
     width: 100%;
     max-width: 100%;
-    height: calc(100vh - 260px);
-    min-height: 1200pxpx;
+    height: 760px;
+    min-height: 760px;
     overflow: hidden;
     border-radius: 8px;
     background: #000;
@@ -695,9 +695,6 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .gform-embed-wrap {
-        min-height: calc(100vh + 100px);
-    }
     .contact-wrapper iframe,
     .gform-iframe {
         min-height: auto;
@@ -776,6 +773,10 @@ footer {
     padding: 60px 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-page footer {
+    padding: 20px 0;
 }
 
 .footer-socials {
