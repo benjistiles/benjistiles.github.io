@@ -3,192 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Benji Stiles</title>
+    <meta name="description" content="Recordings, session credits, and performance photographs from bassist Benji Stiles.">
+    <meta name="theme-color" content="#0b0c0b">
+    <title>Music &amp; Photos | Benji Stiles</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="inner-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <nav class="navbar">
-        <div class="brand">
-          <img class="logo" src="images/logo.png">
-        </div>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html" class="active">Portfolio</a>
-            <a href="shows.html">Shows</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="nav-toggle" id="navToggle">
-            <i class="fas fa-bars"></i>
+    <nav class="site-nav is-solid" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="wordmark" href="index.html" aria-label="Benji Stiles home">
+                <img class="wordmark-logo" src="images/logo.png" alt="Benji Stiles">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+                <span></span><span></span>
+                <span class="sr-only">Open navigation</span>
+            </button>
+            <div class="nav-links" id="nav-links" data-nav-links>
+                <a href="index.html">Home</a>
+                <a class="active" href="portfolio.html" aria-current="page">Music &amp; Photos</a>
+                <a href="shows.html">Dates</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
+    <main id="main-content">
+        <header class="page-intro wrap">
+            <div class="page-intro-copy">
+                <p class="section-label">Music &amp; photos</p>
+                <h1>Selected work</h1>
+                <p>Live recordings, session releases, and photographs from jazz, commercial, orchestral, and percussion performances.</p>
+            </div>
+            <figure class="page-intro-image">
+                <img src="images/web/concert-red-hat.webp" alt="Benji Stiles performing on electric bass" width="1800" height="1590">
+            </figure>
+        </header>
 
-
-<!----  VIDEO CONTENT REMOVED, MAY RE-ADD IN FUTURE
-        <section class="media-section">
-            <h3>Video Content</h3>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <video controls poster="images/ComboWide.jpg">
-                        <source src="videos/20250429_211459.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p class="desc"><b>Live Performance Compilation</b></p>
+        <section class="wrap section-pad" id="recordings" aria-labelledby="recordings-title">
+            <div class="section-heading-row">
+                <div>
+                    <p class="section-label">Audio</p>
+                    <h2 id="recordings-title">Live recordings</h2>
                 </div>
             </div>
+            <div class="recording-list">
+                <article class="recording-row">
+                    <span class="recording-number">01</span>
+                    <div><h3>Bye Bye Blackbird</h3><p>Benji Stiles and Harper Krimm</p></div>
+                    <audio controls preload="none" src="audio/blackbirdduet.mp3" controlsList="nodownload">Your browser does not support audio playback.</audio>
+                </article>
+                <article class="recording-row">
+                    <span class="recording-number">02</span>
+                    <div><h3>Isn't It Romantic?</h3><p>Luke Smith Quartet</p></div>
+                    <audio controls preload="none" src="audio/isntitromantic.mp3" controlsList="nodownload">Your browser does not support audio playback.</audio>
+                </article>
+                <article class="recording-row">
+                    <span class="recording-number">03</span>
+                    <div><h3>Cheek to Cheek</h3><p>AU Jazz Combo</p></div>
+                    <audio controls preload="none" src="audio/cheek2cheek.mp3" controlsList="nodownload">Your browser does not support audio playback.</audio>
+                </article>
+                <article class="recording-row">
+                    <span class="recording-number">04</span>
+                    <div><h3>Tryin' Times</h3><p>AU Jazz Combo</p></div>
+                    <audio controls preload="none" src="audio/tryintimes.mp3" controlsList="nodownload">Your browser does not support audio playback.</audio>
+                </article>
+            </div>
         </section>
--->
-        <section class="media-section">
-            <h3>Gallery</h3>
+
+        <section class="session-section">
+            <div class="wrap session-grid">
+                <div>
+                    <p class="section-label">Session work</p>
+                    <h2>Released recordings</h2>
+                    <p class="session-note">Selected recordings featuring performance or studio contributions by Benji.</p>
+                </div>
+                <ol class="credit-list">
+                    <li><a href="https://open.spotify.com/track/4ST69q9aKbb4niLpFmrY2B" target="_blank" rel="noreferrer"><span>Like My Friends</span><small>Listen on Spotify ↗</small></a></li>
+                    <li><a href="https://open.spotify.com/track/3G8WDB8cTggKiFuu04pPmT" target="_blank" rel="noreferrer"><span>Astronaut</span><small>Listen on Spotify ↗</small></a></li>
+                    <li><a href="https://open.spotify.com/track/5AJ7X97vvG1sS9RcybGpzx" target="_blank" rel="noreferrer"><span>Tide</span><small>Listen on Spotify ↗</small></a></li>
+                    <li><a href="https://open.spotify.com/track/6vQLJHzbVG3RFuvGEfxNBm" target="_blank" rel="noreferrer"><span>To Whom It May Concern</span><small>Listen on Spotify ↗</small></a></li>
+                    <li><a href="https://open.spotify.com/track/640wggtOTAlTpmWX60Cvlo" target="_blank" rel="noreferrer"><span>Mercy</span><small>Listen on Spotify ↗</small></a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="wrap section-pad" id="photographs" aria-labelledby="photo-title">
+            <div class="section-heading-row">
+                <div>
+                    <p class="section-label">Photographs</p>
+                    <h2 id="photo-title">Performance archive</h2>
+                </div>
+                <p class="heading-note">Select a photograph to enlarge it.</p>
+            </div>
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/headshotperforming.jpg" alt="Benji Stiles performing on upright bass">
-                </div>
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/blur.jpg" alt="Stylized photo of Benji Stiles performing">
-                </div>
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/BigBandWide.jpg" alt="Benji Stiles performing with the AU Big Band">
-                </div>
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/uprightportrait.jpg" alt="Benji playing upright bass">
-                </div>
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/houseshow.jpg" alt="Photo from a house show performance">
-                </div>
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/timpani.jpg" alt="Benji Stiles playing timpani with the Anderson Symphony Orchestra">
-                </div>
-                <!---
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/DSC_0155-2.jpg" alt="In the Studio">
-                </div>
-                <div class="gallery-item" onclick="openModal(this.querySelector('img'))">
-                    <img src="images/Cairn.JPG" alt="Benji Stiles Profile">
-                </div>
-              -->
+                <button class="gallery-photo gallery-photo-tall" type="button" data-lightbox data-caption="Electric bass performance">
+                    <img src="images/web/bar-show.webp" alt="Benji Stiles playing electric bass on stage" loading="lazy">
+                </button>
+                <button class="gallery-photo gallery-photo-wide" type="button" data-lightbox data-caption="Big band performance">
+                    <img src="images/web/big-band.webp" alt="Benji Stiles performing with a big band" loading="lazy">
+                </button>
+                <button class="gallery-photo" type="button" data-lightbox data-caption="Jazz trio performance">
+                    <img src="images/web/jazz-trio.webp" alt="Benji Stiles performing in a jazz trio" loading="lazy">
+                </button>
+                <button class="gallery-photo" type="button" data-lightbox data-caption="Drum set performance">
+                    <img src="images/web/drums.webp" alt="Benji Stiles playing drum set" loading="lazy">
+                </button>
+                <button class="gallery-photo gallery-photo-tall" type="button" data-lightbox data-caption="Upright bass portrait">
+                    <img src="images/web/upright-portrait.webp" alt="Benji Stiles playing upright bass" loading="lazy">
+                </button>
+                <button class="gallery-photo" type="button" data-lightbox data-caption="Electric bass performance">
+                    <img src="images/web/electric-bass.webp" alt="Benji Stiles playing electric bass" loading="lazy">
+                </button>
+                <button class="gallery-photo" type="button" data-lightbox data-caption="Drumline performance">
+                    <img src="images/web/drumline.webp" alt="Benji Stiles performing with a drumline" loading="lazy">
+                </button>
+                <button class="gallery-photo gallery-photo-wide" type="button" data-lightbox data-caption="Combo performance">
+                    <img src="images/web/combo-wide.webp" alt="Benji Stiles performing with a jazz combo" loading="lazy">
+                </button>
+                <button class="gallery-photo gallery-photo-tall" type="button" data-lightbox data-caption="Upright bass performance">
+                    <img src="images/web/upright-performance.webp" alt="Benji Stiles performing on upright bass" loading="lazy">
+                </button>
+                <button class="gallery-photo" type="button" data-lightbox data-caption="House show">
+                    <img src="images/web/house-show.webp" alt="Benji Stiles at a house show" loading="lazy">
+                </button>
+                <button class="gallery-photo" type="button" data-lightbox data-caption="Orchestra performance">
+                    <img src="images/web/timpani.webp" alt="Benji Stiles playing timpani with an orchestra" loading="lazy">
+                </button>
             </div>
         </section>
-
-        <section class="media-section">
-            <h3>Audio</h3>
-            <div class="tracklist-container">
-                <div class="tracklist-item">
-                    <span class="track-number">01</span>
-                    <div class="track-info">
-                        <span class="track-title">Bye Bye Blackbird</span>
-                        <span class="track-desc">Benji Stiles and Harper Krimm</span>
-                    </div>
-                    <div class="track-player">
-                        <audio controls src="audio/blackbirdduet.mp3" controlsList="nodownload"></audio>
-                    </div>
-                </div>
-                <div class="tracklist-item">
-                    <span class="track-number">02</span>
-                    <div class="track-info">
-                        <span class="track-title">Isn't It Romantic?</span>
-                        <span class="track-desc">Luke Smith Quartet</span>
-                    </div>
-                    <div class="track-player">
-                        <audio controls src="audio/isntitromantic.mp3" controlsList="nodownload"></audio>
-                    </div>
-                </div>
-                <div class="tracklist-item">
-                    <span class="track-number">03</span>
-                    <div class="track-info">
-                        <span class="track-title">Cheek to Cheek</span>
-                        <span class="track-desc">AU Jazz Combo</span>
-                    </div>
-                    <div class="track-player">
-                        <audio controls src="audio/cheek2cheek.mp3" controlsList="nodownload"></audio>
-                    </div>
-                </div>
-                <div class="tracklist-item">
-                    <span class="track-number">04</span>
-                    <div class="track-info">
-                        <span class="track-title">Tryin' Times (Roberta Fleck)</span>
-                        <span class="track-desc">AU Jazz Combo</span>
-                    </div>
-                    <div class="track-player">
-                        <audio controls src="audio/tryintimes.mp3" controlsList="nodownload"></audio>
-                    </div>
-                </div>
-            </div>
-        </section>
-      <section class="media-section">
-        <h3>Session Work</h3>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4ST69q9aKbb4niLpFmrY2B?utm_source=generator&theme=0&si=44afa4a971564d6d" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Flikemyfriends&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3G8WDB8cTggKiFuu04pPmT?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fastronautauthenticity&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5AJ7X97vvG1sS9RcybGpzx?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Ftideianclark&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6vQLJHzbVG3RFuvGEfxNBm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fkfcv47gdz05sz&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/640wggtOTAlTpmWX60Cvlo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Ftowhomitmayconcern&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4UweaGP2JLx1j20oCroMEK?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fmercyhunterbradley&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
-        </section>
-
     </main>
 
-    <!-- Modal for Gallery -->
-    <div id="imgModal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
+    <dialog class="lightbox" data-lightbox-dialog aria-label="Expanded performance photograph">
+        <button class="dialog-close" type="button" data-lightbox-close aria-label="Close photograph">Close</button>
+        <figure>
+            <img src="" alt="" data-lightbox-image>
+            <figcaption data-lightbox-caption></figcaption>
+        </figure>
+    </dialog>
 
-    <footer>
-        <div class="footer-socials">
-            <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/benjistilesmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Benji Stiles</p>
+            <div class="footer-links" aria-label="Social links">
+                <a href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank" rel="noreferrer">Facebook</a>
+                <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
         </div>
-        <p class="footer-text">&copy; 2026 Benji Stiles. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Ensure only one audio track plays at a time
-        const audios = document.querySelectorAll('audio');
-        audios.forEach(audio => {
-            audio.addEventListener('play', () => {
-                audios.forEach(otherAudio => {
-                    if (otherAudio !== audio) {
-                        otherAudio.pause();
-                        otherAudio.currentTime = 0;
-                    }
-                });
-            });
-        });
-
-        function openModal(img) {
-            const modal = document.getElementById('imgModal');
-            const modalImg = document.getElementById('modalImg');
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        }
-
-        function closeModal() {
-            document.getElementById('imgModal').style.display = "none";
-        }
-    </script>
+    <script src="scripts/site.js" defer></script>
 </body>
 </html>

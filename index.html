@@ -3,86 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benji Stiles</title>
+    <meta name="description" content="Benji Stiles is a jazz bassist, multi-instrumentalist, and educator based in Michigan.">
+    <meta name="theme-color" content="#0b0c0b">
+    <title>Benji Stiles | Jazz Bassist</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preload" as="image" href="images/web/upright-performance.webp">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <nav class="navbar">
-        <div class="brand">
-          <img class="logo" src="images/logo.png">
-        </div>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" class="active">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="shows.html">Shows</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="nav-toggle" id="navToggle">
-            <i class="fas fa-bars"></i>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="wordmark" href="index.html" aria-label="Benji Stiles home">
+                <img class="wordmark-logo" src="images/logo.png" alt="Benji Stiles">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+                <span></span><span></span>
+                <span class="sr-only">Open navigation</span>
+            </button>
+            <div class="nav-links" id="nav-links" data-nav-links>
+                <a class="active" href="index.html" aria-current="page">Home</a>
+                <a href="portfolio.html">Music &amp; Photos</a>
+                <a href="shows.html">Dates</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <img class="hero-img" src="images/banner.jpg" alt="Benji Stiles banner">
-        <div class="hero-content">
-            <h1>Benji Stiles</h1>
-            <p>Musician | Teacher | Engineer</p>
+    <header class="home-hero" data-hero-slideshow>
+        <div class="hero-media" aria-hidden="true">
+            <!-- Slideshow images: change the file path in any background-image URL below. -->
+            <div class="hero-slide is-active" style="background-image: url('images/web/upright-performance.webp')" data-hero-slide></div>
+            <div class="hero-slide" style="background-image: url('images/web/electric-bass-portrait.webp')" data-hero-slide></div>
+            <div class="hero-slide" style="background-image: url('images/web/timpani.webp')" data-hero-slide></div>
+            <div class="hero-slide" style="background-image: url('images/web/upright-portrait.webp')" data-hero-slide></div>
+        </div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content wrap">
+            <p class="hero-role">Electric &amp; upright bass <span aria-hidden="true">·</span> Michigan</p>
+            <h1>Benji<br>Stiles</h1>
+            <div class="hero-links">
+                <a href="portfolio.html#recordings">Listen</a>
+                <a href="shows.html">Performance dates</a>
+            </div>
+        </div>
+        <div class="slide-controls" aria-label="Performance photographs">
+            <span class="slide-status" aria-live="polite" data-slide-status>01 / 04</span>
+            <button type="button" aria-label="Previous photograph" data-slide-previous>←</button>
+            <button type="button" aria-label="Pause photograph rotation" data-slide-pause>Pause</button>
+            <button type="button" aria-label="Next photograph" data-slide-next>→</button>
         </div>
     </header>
 
-    <main class="container">
-        <section id="about">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="images/headshot2.jpeg" alt="Benji Stiles performing">
+    <main id="main-content">
+        <section class="intro-section wrap section-pad">
+            <div class="section-label">About</div>
+            <div class="intro-copy">
+                <h2>Bassist, multi-instrumentalist, and educator.</h2>
+                <p>Benji Stiles is a musician based in Michigan. He holds a Bachelor of Music in Commercial Music from Anderson University, where he studied electric and upright bass, drum set and percussion, songwriting, composition, and audio engineering. He is currently pursuing a Master of Music in Jazz Studies at Michigan State University, studying with bassist Rodney Whitaker.</p>
+                <p>His work includes jazz and commercial performance, studio sessions, arranging, private instruction, and audio engineering. Before moving to Michigan, he served as a studio technician at Anderson University and performed with the Anderson Symphony Orchestra, AUthenticity, jazz ensembles, and other collaborative groups.</p>
+                <a class="text-link" href="contact.html">Booking and lesson inquiries <span aria-hidden="true">→</span></a>
+            </div>
+            <figure class="intro-portrait">
+                <img src="images/web/portrait.webp" alt="Portrait of Benji Stiles" width="574" height="600">
+            </figure>
+        </section>
+
+        <section class="photo-section" aria-labelledby="performance-heading">
+            <div class="wrap section-heading-row">
+                <div>
+                    <p class="section-label">Performance</p>
+                    <h2 id="performance-heading">On stage and on the bandstand</h2>
                 </div>
-                <div class="about-text">
-                    <p>
-                        <i>Benji Stiles is a musician and educator currently based in Michigan.</i> 
-                        Benji holds a Bachelor of Music in Commercial Music from Anderson University in South Carolina, where he studied electric and upright bass, drum set and percussion, songwriting and composition, and audio engineering. He is currently pursuing a Masters in Jazz at Michigan State University and studying with renowned bassist Rodney Whitaker.
-                    </p>
-                    <p>
-                        With a deep background in sound engineering and audio technology, Benji served as a Studio Technician at Anderson University from 2022-2024. His professional experience spans mixing, livestream audio management, and studio session engineering.
-                    </p>
-                    <p>
-                        His musical journey is marked by diversity, from student musical director roles in premiere ensembles like <b>AUthenticity</b> to performing with the <b>Anderson Symphony Orchestra</b> and various jazz and commercial music groups.
-                    </p>
-                    <p>
-                        Drawing inspiration from a wide spectrum—from <i>Thelonious Monk</i> and <i>Ray Brown</i> to <i>Meshuggah</i> and <i>Julian Lage</i>—Benji is constantly striving to push the limits of himself as an artist and the music he creates. He explores the world of music from every possible angle, combining technical expertise with limitless creative expression.
-                    </p>
-                </div>
+                <a class="text-link" href="portfolio.html#photographs">View photographs <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="photo-story">
+                <figure><img src="images/web/bar-show.webp" alt="Benji Stiles playing electric bass on stage" loading="lazy"></figure>
+                <figure><img src="images/web/combo-wide.webp" alt="Benji Stiles performing at a jazz concert" loading="lazy"></figure>
+                <figure><img src="images/web/drums.webp" alt="Benji Stiles playing drum set" loading="lazy"></figure>
+                <figure><img src="images/web/jazz-trio.webp" alt="Benji Stiles performing in a jazz trio" loading="lazy"></figure>
+                <figure><img src="images/web/concert-red-hat.webp" alt="Benji Stiles playing electric bass under stage lights" loading="lazy"></figure>
             </div>
         </section>
 
+        <section class="recordings-preview wrap section-pad" aria-labelledby="recordings-heading">
+            <div class="section-heading-row">
+                <div>
+                    <p class="section-label">Recordings</p>
+                    <h2 id="recordings-heading">Selected live recordings</h2>
+                </div>
+                <a class="text-link" href="portfolio.html#recordings">All recordings <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="recording-list">
+                <article class="recording-row">
+                    <span class="recording-number">01</span>
+                    <div>
+                        <h3>Bye Bye Blackbird</h3>
+                        <p>Benji Stiles and Harper Krimm</p>
+                    </div>
+                    <audio controls preload="none" src="audio/blackbirdduet.mp3" controlsList="nodownload">Your browser does not support audio playback.</audio>
+                </article>
+                <article class="recording-row">
+                    <span class="recording-number">02</span>
+                    <div>
+                        <h3>Isn't It Romantic?</h3>
+                        <p>Luke Smith Quartet</p>
+                    </div>
+                    <audio controls preload="none" src="audio/isntitromantic.mp3" controlsList="nodownload">Your browser does not support audio playback.</audio>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-strip">
+            <div class="wrap contact-strip-inner">
+                <p>Available for performance, session work, arranging, and private instruction.</p>
+                <a href="mailto:benjistilesmusic@gmail.com">benjistilesmusic@gmail.com</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-socials">
-            <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/benjistilesmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Benji Stiles</p>
+            <div class="footer-links" aria-label="Social links">
+                <a href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank" rel="noreferrer">Facebook</a>
+                <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
         </div>
-        <p class="footer-text">&copy; 2026 Benji Stiles. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu on click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-    </script>
+    <script src="scripts/site.js" defer></script>
 </body>
 </html>

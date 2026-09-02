@@ -3,74 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact bassist and educator Benji Stiles for performances, sessions, arranging, or private lessons.">
+    <meta name="theme-color" content="#0b0c0b">
     <title>Contact | Benji Stiles</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="contact-page">
+<body class="inner-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <nav class="navbar">
-        <div class="brand">
-          <img class="logo" src="images/logo.png">
-        </div>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="shows.html">Shows</a>
-            <a href="contact.html" class="active">Contact</a>
-        </div>
-        <div class="nav-toggle" id="navToggle">
-            <i class="fas fa-bars"></i>
+    <nav class="site-nav is-solid" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="wordmark" href="index.html" aria-label="Benji Stiles home">
+                <img class="wordmark-logo" src="images/logo.png" alt="Benji Stiles">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+                <span></span><span></span>
+                <span class="sr-only">Open navigation</span>
+            </button>
+            <div class="nav-links" id="nav-links" data-nav-links>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Music &amp; Photos</a>
+                <a href="shows.html">Dates</a>
+                <a class="active" href="contact.html" aria-current="page">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <main class="responsive-wrapper container">
-        <section class="contact-wrapper">
-            <h1 class="section-title">Services</h1>
-            <div class="services-list">
-                <ul>
-                    <li><span>Live performances (electric & upright bass, drums & percussion)</span> <i class="fas fa-check"></i></li>
-                    <li><span>Studio work (electric & upright bass, percussion)</span> <i class="fas fa-check"></i></li>
-                    <li><span>Transcription, charting, arranging, or engraving work</span> <i class="fas fa-check"></i></li>
-                    <li><span>Private lessons</span> <i class="fas fa-check"></i></li>
-                    <li><span>Audio engineering and mixing</span> <i class="fas fa-check"></i></li>
-                    <li><span>Scoring and composition for film projects or video games</span> <i class="fas fa-check"></i></li>
+    <main id="main-content">
+        <header class="contact-intro wrap">
+            <p class="section-label">Contact</p>
+            <h1>Get in touch</h1>
+            <p>For performances, session work, arranging, or lessons, email <a href="mailto:benjistilesmusic@gmail.com">benjistilesmusic@gmail.com</a> or use the form below.</p>
+        </header>
 
-                </ul>
-            </div>
+        <section class="contact-grid wrap">
+            <aside class="contact-details">
+                <div>
+                    <p class="section-label">Based in</p>
+                    <p class="contact-value">Michigan</p>
+                </div>
+                <div>
+                    <p class="section-label">Available for</p>
+                    <ul class="plain-list">
+                        <li>Electric and upright bass performance</li>
+                        <li>Drum set and percussion work</li>
+                        <li>Studio sessions</li>
+                        <li>Transcription, arranging, and engraving</li>
+                        <li>Private lessons</li>
+                        <li>Audio engineering and mixing</li>
+                        <li>Composition for film and games</li>
+                    </ul>
+                </div>
+                <figure class="contact-photo">
+                    <img src="images/web/electric-bass-portrait.webp" alt="Benji Stiles playing electric bass" loading="lazy">
+                </figure>
+            </aside>
 
-            <p>For inquiries regarding booking or collaboration, please use the form below.</p>
-
-            <div class="gform-embed-wrap">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPmKtZlle5qYdy49YSqR43WhV0vlLFxM4ovc8WLxdU5jvv2Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" class="gform-iframe" scrolling="no">Loading…</iframe>
-            </div>
+            <form class="contact-form" data-contact-form>
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="inquiry">Inquiry</label>
+                    <select id="inquiry" name="inquiry">
+                        <option>Performance</option>
+                        <option>Studio session</option>
+                        <option>Private lesson</option>
+                        <option>Arranging or transcription</option>
+                        <option>Audio engineering</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                </div>
+                <button class="button-solid" type="submit">Open email draft</button>
+                <p class="form-note">Submitting opens your email app with the message filled in.</p>
+            </form>
         </section>
     </main>
 
-
-    <footer>
-        <div class="footer-socials">
-            <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/benjistilesmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Benji Stiles</p>
+            <div class="footer-links" aria-label="Social links">
+                <a href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank" rel="noreferrer">Facebook</a>
+                <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
         </div>
-        <p class="footer-text">&copy; 2026 Benji Stiles. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="scripts/site.js" defer></script>
 </body>
 </html>
