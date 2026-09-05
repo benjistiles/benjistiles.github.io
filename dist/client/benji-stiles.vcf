@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Benji Stiles Music//NFC Contact Card//EN
+N:Stiles;Benji;;;
+FN:Benji Stiles
+TITLE:Jazz Bassist
+TEL;TYPE=CELL:+19089025994
+EMAIL;TYPE=INTERNET;TYPE=WORK:benjistilesmusic@gmail.com
+URL;TYPE=WORK:https://benjistilesmusic.com/
+NOTE:Jazz bassist specializing in electric and upright bass performance.
+REV:20260826T160000Z
+END:VCARD

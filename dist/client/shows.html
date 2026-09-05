@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming and recent performance dates for jazz bassist Benji Stiles.">
+    <meta name="theme-color" content="#f1eee6">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Performance Dates | Benji Stiles">
+    <meta property="og:description" content="Upcoming and recent performance dates for bassist Benji Stiles.">
+    <meta property="og:url" content="https://benjistilesmusic.com/shows.html">
+    <meta property="og:image" content="https://benjistilesmusic.com/images/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://benjistilesmusic.com/images/og.png">
+    <title>Performance Dates | Benji Stiles</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="inner-page shows-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="site-nav is-solid" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="wordmark" href="index.html" aria-label="Benji Stiles home">
+                <img class="wordmark-logo" src="images/logo.png" alt="" width="500" height="500">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+                <span></span><span></span>
+                <span class="sr-only" data-nav-label>Open navigation</span>
+            </button>
+            <div class="nav-links" id="nav-links" data-nav-links>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a class="active" href="shows.html" aria-current="page">Shows</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <header class="page-intro page-intro-dates editorial-hero wrap">
+            <div class="page-intro-copy">
+                <p class="section-label">Live calendar</p>
+                <h1>Performance dates</h1>
+                <p class="page-intro-lede">Public dates and selected recent engagements. Contact Benji directly for booking availability.</p>
+                <a class="button-solid" href="contact.html">Booking inquiries <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <figure class="page-intro-image">
+                <img src="images/web/big-band.webp" alt="A big band performing in concert" width="1800" height="1077">
+            </figure>
+            <aside class="page-intro-aside intro-note panel" aria-label="Booking availability">
+                <p class="section-label">Available for</p>
+                <p>Public performances, private events, and session work.</p>
+            </aside>
+        </header>
+
+        <section class="wrap dates-section editorial-section" aria-labelledby="upcoming-title">
+            <div class="dates-heading">
+                <p class="section-label">Upcoming</p>
+                <h2 id="upcoming-title">Public performances</h2>
+            </div>
+            <div class="shows-list" data-upcoming-shows>
+                <noscript>
+                    <p class="empty-state">The interactive performance calendar requires JavaScript. For current dates, email <a href="mailto:benjistilesmusic@gmail.com">benjistilesmusic@gmail.com</a>.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="wrap dates-section editorial-section past-dates" aria-labelledby="past-title">
+            <div class="dates-heading">
+                <p class="section-label">Archive</p>
+                <h2 id="past-title">Recent performances</h2>
+            </div>
+            <div class="shows-list" data-past-shows>
+                <noscript>
+                    <p class="empty-state">Recent performance details are available when JavaScript is enabled.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="contact-strip booking-cta" aria-labelledby="booking-cta-title">
+            <div class="contact-strip-inner booking-cta-inner wrap">
+                <div class="contact-strip-heading booking-cta-copy">
+                    <p class="section-label">Booking</p>
+                    <h2 id="booking-cta-title">Planning a performance?</h2>
+                </div>
+                <p>Benji is available for live performances, private events, session work, and collaborative projects.</p>
+                <div class="contact-strip-actions">
+                    <a class="button-solid" href="contact.html">Start a conversation</a>
+                    <a class="text-link" href="mailto:benjistilesmusic@gmail.com">benjistilesmusic@gmail.com <span aria-hidden="true">&#8599;</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="show-dialog" data-show-dialog aria-labelledby="show-dialog-title">
+        <div class="dialog-header">
+            <div>
+                <p class="section-label" data-show-date></p>
+                <h2 id="show-dialog-title" data-show-title>Performance details</h2>
+            </div>
+            <button class="dialog-close" type="button" aria-label="Close performance details" data-show-close>Close</button>
+        </div>
+        <div class="show-dialog-body">
+            <div class="show-dialog-section">
+                <h3>Location</h3>
+                <p data-show-location></p>
+            </div>
+            <div class="show-dialog-section">
+                <h3>Personnel</h3>
+                <ul data-show-personnel></ul>
+            </div>
+            <p class="show-notes" data-show-notes></p>
+            <button class="button-outline" type="button" data-calendar-download>Add to calendar</button>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <nav class="footer-links" aria-label="Social links">
+                <a href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
+                <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank" rel="noreferrer" aria-label="Facebook">FB</a>
+                <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank" rel="noreferrer" aria-label="LinkedIn">IN</a>
+            </nav>
+            <p>&copy; 2026 Benji Stiles. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/shows.js" defer></script>
+</body>
+</html>
