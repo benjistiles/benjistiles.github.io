@@ -31,6 +31,16 @@ const showData = [
         endTime: '7:00 PM',
         title: 'Private Event',
         personnel: ['Olivia Van Goor — vocals and bandleader', 'Lisa Sung — keys', 'Jeff Shoup — drums', 'Benji Stiles — bass']
+    },
+    {
+        date: 'November 14, 2026',
+        datetime: '2026-11-14',
+        startTime: '12:00 PM',
+        endTime: '2:00 PM',
+        title: 'Jazz Brunch w/ Harper Krimm Quartet',
+        personnel: ['Harper Krimm — vocals and bandleader', 'Martin Lesch — keys', 'Benji Stiles — bass'],
+        address: 'Sonesta Resort and Spa, 130 Shipyard Dr, Hilton Head Island, SC',
+        notes: 'https://www.jazzforallages.com/'
     }
 ];
 
