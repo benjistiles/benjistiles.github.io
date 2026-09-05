@@ -3,20 +3,32 @@ const navToggle = document.querySelector('[data-nav-toggle]');
 const navLinks = document.querySelector('[data-nav-links]');
 
 if (nav && navToggle && navLinks) {
+    const navLabel = navToggle.querySelector('[data-nav-label]');
+
     const closeNav = () => {
         navLinks.classList.remove('is-open');
         navToggle.setAttribute('aria-expanded', 'false');
+        if (navLabel) navLabel.textContent = 'Open navigation';
     };
 
     navToggle.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('is-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
+        if (navLabel) navLabel.textContent = isOpen ? 'Close navigation' : 'Open navigation';
     });
 
     navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') closeNav();
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+        if (!nav.contains(event.target)) closeNav();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 820) closeNav();
     });
 
     const updateNav = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);

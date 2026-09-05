@@ -4,49 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta name="theme-color" content="#080808">
+    <meta name="theme-color" content="#20231f">
     <meta name="description" content="Contact and website links for jazz bassist Benji Stiles.">
     <title>Benji Stiles | Jazz Bassist</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;500;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #080808;
-            --section-bg: #121212;
-            --accent-color: #89bd88;
-            --text-primary: #ffffff;
-            --text-secondary: #929f93;
-            --transition: 180ms ease;
+            color-scheme: light;
+            --parchment: #f2eee6;
+            --ink: #20231f;
+            --stone: #ddd5c8;
+            --clay: #a86f50;
+            --sage: #687260;
+            --sage-ink: #5f6858;
+            --sage-deep: #545d4f;
+            --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --serif: Georgia, "Times New Roman", Times, serif;
+            --ease: 180ms ease;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
-            padding: 0;
         }
 
         html {
             min-height: 100%;
-            background: var(--bg-color);
+            background: var(--ink);
         }
 
         body {
             min-height: 100vh;
             min-height: 100svh;
-            background:
-                radial-gradient(circle at 50% -8%, rgba(137, 189, 136, 0.13), transparent 34rem),
-                var(--bg-color);
-            color: var(--text-primary);
-            font-family: "Inter", sans-serif;
-            line-height: 1.5;
             padding:
-                max(26px, env(safe-area-inset-top))
-                max(20px, env(safe-area-inset-right))
-                max(24px, env(safe-area-inset-bottom))
-                max(20px, env(safe-area-inset-left));
+                max(14px, env(safe-area-inset-top))
+                max(14px, env(safe-area-inset-right))
+                max(14px, env(safe-area-inset-bottom))
+                max(14px, env(safe-area-inset-left));
+            background:
+                radial-gradient(circle at 8% 5%, rgba(168, 111, 80, 0.20), transparent 20rem),
+                radial-gradient(circle at 95% 92%, rgba(104, 114, 96, 0.24), transparent 24rem),
+                var(--ink);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.5;
         }
 
         a {
@@ -55,254 +61,397 @@
         }
 
         .page-shell {
-            width: min(100%, 520px);
-            min-height: calc(100svh - 50px);
-            margin: 0 auto;
+            width: min(100%, 680px);
+            min-height: calc(100svh - 28px);
+            margin-inline: auto;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .identity {
-            text-align: center;
-            margin-bottom: 30px;
-            animation: fade-in 600ms ease both;
-        }
-
-        .logo-link {
-            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            min-width: 48px;
-            min-height: 48px;
-            margin-bottom: 17px;
-            border-radius: 12px;
         }
 
-        .logo-link:focus-visible,
-        .link-button:focus-visible {
-            outline: 3px solid rgba(137, 189, 136, 0.55);
-            outline-offset: 4px;
+        .contact-card {
+            width: 100%;
+            overflow: hidden;
+            background: var(--parchment);
+            border: 1px solid var(--stone);
+            box-shadow: 10px 10px 0 rgba(168, 111, 80, 0.72);
+            animation: card-in 500ms ease both;
+        }
+
+        .masthead {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 13px 17px;
+            background: var(--ink);
+            color: var(--parchment);
+            border-bottom: 5px solid var(--clay);
+        }
+
+        .brand-lockup {
+            display: flex;
+            align-items: center;
+            gap: 11px;
         }
 
         .logo {
+            width: 48px;
+            height: 48px;
             display: block;
-            width: auto;
-            height: 104px;
-            max-width: 72vw;
-            object-fit: contain;
+            object-fit: cover;
+        }
+
+        .brand-copy {
+            display: grid;
+            gap: 1px;
+        }
+
+        .brand-name {
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-role,
+        .card-index,
+        .eyebrow,
+        .availability-label,
+        .link-number,
+        footer {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .brand-role {
+            color: var(--stone);
+        }
+
+        .card-index {
+            flex: 0 0 auto;
+            color: var(--stone);
+            writing-mode: vertical-rl;
+        }
+
+        .intro {
+            position: relative;
+            padding: 36px 20px 28px;
+            border-bottom: 1px solid var(--stone);
+        }
+
+        .intro::before {
+            content: "";
+            position: absolute;
+            top: 36px;
+            left: 0;
+            width: 5px;
+            height: 68px;
+            background: var(--clay);
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--sage-ink);
         }
 
         h1 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(2.35rem, 10vw, 3.35rem);
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            line-height: 1.05;
-            text-wrap: balance;
+            max-width: 8ch;
+            font-family: var(--serif);
+            font-size: clamp(3.55rem, 17vw, 6rem);
+            font-weight: 400;
+            letter-spacing: -0.055em;
+            line-height: 0.82;
         }
 
-        .occupation {
-            margin-top: 11px;
-            color: var(--accent-color);
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
+        h1 span {
+            display: block;
+            margin-left: 0.5em;
+            color: var(--clay);
+            font-style: italic;
+        }
+
+        .intro-copy {
+            max-width: 34ch;
+            margin-top: 25px;
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            line-height: 1.45;
+        }
+
+        .availability {
+            margin-top: 25px;
+            padding-top: 15px;
+            display: grid;
+            gap: 5px;
+            border-top: 1px solid var(--stone);
+        }
+
+        .availability-label {
+            color: var(--sage-ink);
+        }
+
+        .availability-copy {
+            max-width: 38ch;
+            font-size: 0.86rem;
         }
 
         .links {
             display: grid;
-            gap: 13px;
+            padding: 9px 20px 20px;
         }
 
         .link-button {
-            min-height: 68px;
+            min-height: 83px;
             display: grid;
-            grid-template-columns: 42px 1fr 20px;
+            grid-template-columns: 30px minmax(0, 1fr) 30px;
             align-items: center;
-            gap: 13px;
-            padding: 12px 20px 12px 15px;
-            background: rgba(18, 18, 18, 0.93);
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            border-radius: 14px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
-            transition:
-                transform var(--transition),
-                border-color var(--transition),
-                background var(--transition);
-            animation: rise-in 520ms ease both;
+            gap: 11px;
+            padding: 12px 4px;
+            border-bottom: 1px solid var(--stone);
+            transition: background-color var(--ease), color var(--ease), padding var(--ease);
             -webkit-tap-highlight-color: transparent;
         }
 
-        .link-button:nth-child(2) {
-            animation-delay: 70ms;
+        .link-button:focus-visible {
+            position: relative;
+            z-index: 1;
+            outline: 3px solid var(--ink);
+            outline-offset: 3px;
         }
 
-        .link-button:nth-child(3) {
-            animation-delay: 140ms;
-        }
-
-        .link-button:hover {
-            transform: translateY(-2px);
-            background: rgba(137, 189, 136, 0.08);
-            border-color: rgba(137, 189, 136, 0.62);
-        }
-
-        .link-button:active {
-            transform: scale(0.985);
-        }
-
-        .primary-link {
-            color: var(--bg-color);
-            background: var(--accent-color);
-            border-color: var(--accent-color);
-        }
-
-        .primary-link:hover {
-            color: var(--bg-color);
-            background: #9bc99a;
-            border-color: #9bc99a;
-        }
-
-        .link-icon {
-            width: 42px;
-            height: 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(137, 189, 136, 0.10);
-            border: 1px solid rgba(137, 189, 136, 0.22);
-            border-radius: 50%;
-            color: var(--accent-color);
-            font-size: 1rem;
-        }
-
-        .primary-link .link-icon {
-            background: rgba(8, 8, 8, 0.11);
-            border-color: rgba(8, 8, 8, 0.16);
-            color: var(--bg-color);
+        .link-number {
+            align-self: start;
+            padding-top: 9px;
+            color: var(--sage-ink);
         }
 
         .link-copy {
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
+            min-width: 0;
+            display: grid;
+            gap: 2px;
         }
 
         .link-label {
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
+            font-family: var(--serif);
+            font-size: 1.28rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
         }
 
         .link-detail {
-            color: var(--text-secondary);
+            overflow-wrap: anywhere;
+            color: #51564d;
             font-size: 0.76rem;
-            font-weight: 400;
         }
 
-        .primary-link .link-detail {
-            color: rgba(8, 8, 8, 0.68);
+        .link-symbol {
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            justify-self: end;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            font-family: var(--sans);
+            font-size: 1rem;
+            line-height: 1;
         }
 
-        .link-arrow {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            text-align: right;
+        .link-button:first-child {
+            margin-inline: -10px;
+            padding-inline: 14px;
+            background: var(--ink);
+            color: var(--parchment);
+            border-bottom: 0;
         }
 
-        .primary-link .link-arrow {
-            color: rgba(8, 8, 8, 0.68);
+        .link-button:first-child .link-number,
+        .link-button:first-child .link-detail {
+            color: var(--stone);
         }
 
         footer {
-            margin-top: 30px;
-            color: var(--text-secondary);
-            font-size: 0.69rem;
-            letter-spacing: 0.13em;
-            text-align: center;
-            text-transform: uppercase;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 7px 16px;
+            padding: 15px 20px;
+            background: var(--stone);
+            color: #4a4f47;
         }
 
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        @media (hover: hover) {
+            .link-button:hover {
+                padding-inline: 12px;
+                background: var(--stone);
+            }
+
+            .link-button:first-child:hover {
+                background: var(--sage-deep);
+            }
         }
 
-        @keyframes rise-in {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
+        .link-button:active {
+            background: var(--stone);
         }
 
-        @media (max-height: 650px) {
+        .link-button:first-child:active {
+            background: var(--sage-deep);
+        }
+
+        @media (min-width: 600px) {
+            body {
+                padding:
+                    max(28px, env(safe-area-inset-top))
+                    max(28px, env(safe-area-inset-right))
+                    max(28px, env(safe-area-inset-bottom))
+                    max(28px, env(safe-area-inset-left));
+            }
+
             .page-shell {
-                justify-content: flex-start;
+                min-height: calc(100svh - 56px);
             }
 
-            .identity {
-                margin-bottom: 22px;
+            .contact-card {
+                box-shadow: 16px 16px 0 rgba(168, 111, 80, 0.72);
             }
 
-            .logo {
-                height: 78px;
+            .masthead {
+                padding-inline: 28px;
             }
 
-            h1 {
-                font-size: 2.2rem;
+            .intro {
+                padding: 49px 34px 34px;
+                display: grid;
+                grid-template-columns: minmax(0, 1.15fr) minmax(200px, 0.85fr);
+                column-gap: 38px;
+            }
+
+            .intro::before {
+                top: 49px;
+            }
+
+            .intro-copy {
+                grid-column: 2;
+                grid-row: 1;
+                align-self: end;
+                margin: 0 0 8px;
+                font-size: 1.12rem;
+            }
+
+            .availability {
+                grid-column: 2;
+                grid-row: 2;
+                align-self: start;
+                margin-top: 24px;
+            }
+
+            .links {
+                padding: 10px 34px 28px;
+            }
+
+            .link-button {
+                grid-template-columns: 38px minmax(0, 1fr) 34px;
+                gap: 17px;
+            }
+
+            footer {
+                padding-inline: 34px;
+            }
+        }
+
+        @media (max-height: 700px) {
+            .page-shell {
+                align-items: flex-start;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+            *,
+            *::before,
+            *::after {
                 scroll-behavior: auto !important;
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
         }
+
+        @keyframes card-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <main class="page-shell">
-        <header class="identity">
-            <a class="logo-link" href="https://benjistilesmusic.com/" aria-label="Visit Benji Stiles Music">
-                <img class="logo" src="images/logo.png" alt="Benji Stiles Music logo">
-            </a>
-            <h1>Benji Stiles</h1>
-            <p class="occupation">Jazz Bassist</p>
-        </header>
+        <article class="contact-card">
+            <header class="masthead">
+                <div class="brand-lockup">
+                    <img class="logo" src="images/logo.png" alt="">
+                    <div class="brand-copy">
+                        <p class="brand-name">Benji Stiles</p>
+                        <p class="brand-role">Jazz bassist</p>
+                    </div>
+                </div>
+                <p class="card-index" aria-hidden="true">Contact / 01</p>
+            </header>
 
-        <nav class="links" aria-label="Contact links">
-            <a class="link-button primary-link" href="benji-stiles.vcf" type="text/vcard">
-                <span class="link-icon" aria-hidden="true"><i class="fa-solid fa-address-card"></i></span>
-                <span class="link-copy">
-                    <span class="link-label">Save Contact</span>
-                    <span class="link-detail">Add Benji to your phone</span>
-                </span>
-                <span class="link-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-            </a>
+            <section class="intro" aria-labelledby="page-title">
+                <div class="title-block">
+                    <p class="eyebrow">Performance · Education · Production</p>
+                    <h1 id="page-title">Benji <span>Stiles</span></h1>
+                </div>
+                <p class="intro-copy">A bassist, educator, and studio-minded musician creating thoughtful work across jazz and beyond.</p>
+                <div class="availability">
+                    <p class="availability-label">Available for</p>
+                    <p class="availability-copy">Live performance, sessions, private instruction, and creative collaboration.</p>
+                </div>
+            </section>
 
-            <a class="link-button" href="mailto:benjistilesmusic@gmail.com?subject=Hello%20Benji">
-                <span class="link-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
-                <span class="link-copy">
-                    <span class="link-label">Email Me</span>
-                    <span class="link-detail">benjistilesmusic@gmail.com</span>
-                </span>
-                <span class="link-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
-            </a>
+            <nav class="links" aria-label="Contact and website links">
+                <a class="link-button" href="benji-stiles.vcf" type="text/vcard">
+                    <span class="link-number" aria-hidden="true">01</span>
+                    <span class="link-copy">
+                        <span class="link-label">Save contact</span>
+                        <span class="link-detail">Add Benji to your phone</span>
+                    </span>
+                    <span class="link-symbol" aria-hidden="true">+</span>
+                </a>
 
-            <a class="link-button" href="https://benjistilesmusic.com/">
-                <span class="link-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
-                <span class="link-copy">
-                    <span class="link-label">Visit My Website</span>
-                    <span class="link-detail">benjistilesmusic.com</span>
-                </span>
-                <span class="link-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
-            </a>
-        </nav>
+                <a class="link-button" href="mailto:benjistilesmusic@gmail.com?subject=Hello%20Benji">
+                    <span class="link-number" aria-hidden="true">02</span>
+                    <span class="link-copy">
+                        <span class="link-label">Send an email</span>
+                        <span class="link-detail">benjistilesmusic@gmail.com</span>
+                    </span>
+                    <span class="link-symbol" aria-hidden="true">@</span>
+                </a>
 
-        <footer>&copy; 2026 Benji Stiles</footer>
+                <a class="link-button" href="https://benjistilesmusic.com/">
+                    <span class="link-number" aria-hidden="true">03</span>
+                    <span class="link-copy">
+                        <span class="link-label">Visit the website</span>
+                        <span class="link-detail">benjistilesmusic.com</span>
+                    </span>
+                    <span class="link-symbol" aria-hidden="true">↗</span>
+                </a>
+            </nav>
+
+            <footer>
+                <span>Michigan, USA</span>
+                <span>&copy; 2026 Benji Stiles</span>
+            </footer>
+        </article>
     </main>
 </body>
 </html>

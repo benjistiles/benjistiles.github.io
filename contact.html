@@ -4,47 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact bassist and educator Benji Stiles for performances, sessions, arranging, or private lessons.">
-    <meta name="theme-color" content="#0b0c0b">
+    <meta name="theme-color" content="#f1eee6">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Benji Stiles">
+    <meta property="og:description" content="Contact Benji Stiles for performances, sessions, arranging, production, or private lessons.">
+    <meta property="og:url" content="https://benjistilesmusic.com/contact.html">
+    <meta property="og:image" content="https://benjistilesmusic.com/images/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://benjistilesmusic.com/images/og.png">
     <title>Contact | Benji Stiles</title>
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="inner-page">
+<body class="inner-page contact-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <nav class="site-nav is-solid" aria-label="Primary navigation">
         <div class="nav-inner">
             <a class="wordmark" href="index.html" aria-label="Benji Stiles home">
-                <img class="wordmark-logo" src="images/logo.png" alt="Benji Stiles">
+                <img class="wordmark-logo" src="images/logo.png" alt="" width="500" height="500">
             </a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
                 <span></span><span></span>
-                <span class="sr-only">Open navigation</span>
+                <span class="sr-only" data-nav-label>Open navigation</span>
             </button>
             <div class="nav-links" id="nav-links" data-nav-links>
                 <a href="index.html">Home</a>
-                <a href="portfolio.html">Music &amp; Photos</a>
-                <a href="shows.html">Dates</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="shows.html">Shows</a>
                 <a class="active" href="contact.html" aria-current="page">Contact</a>
             </div>
         </div>
     </nav>
 
     <main id="main-content">
-        <header class="contact-intro wrap">
-            <p class="section-label">Contact</p>
-            <h1>Get in touch</h1>
-            <p>For performances, session work, arranging, or lessons, email <a href="mailto:benjistilesmusic@gmail.com">benjistilesmusic@gmail.com</a> or use the form below.</p>
+        <header class="contact-intro page-intro editorial-hero wrap">
+            <div class="contact-intro-copy">
+                <p class="section-label">Contact</p>
+                <h1>Get in touch</h1>
+                <p class="page-intro-lede">For performances, session work, arranging, or lessons, email <a href="mailto:benjistilesmusic@gmail.com">benjistilesmusic@gmail.com</a> or use the form below.</p>
+            </div>
+            <aside class="page-intro-aside intro-note panel" aria-label="Location and availability">
+                <p class="section-label">Based in</p>
+                <p class="contact-value">Michigan</p>
+                <p>Available for performance, session work, arranging, and private instruction.</p>
+            </aside>
         </header>
 
-        <section class="contact-grid wrap">
-            <aside class="contact-details">
-                <div>
-                    <p class="section-label">Based in</p>
-                    <p class="contact-value">Michigan</p>
-                </div>
-                <div>
+        <section class="contact-grid wrap editorial-section" aria-label="Contact options and inquiry form">
+            <aside class="contact-details" aria-labelledby="contact-options-title">
+                <figure class="contact-photo">
+                    <img src="images/web/electric-bass-portrait.webp" alt="Benji Stiles playing electric bass" width="693" height="866" loading="lazy">
+                </figure>
+                <div class="contact-availability">
                     <p class="section-label">Available for</p>
+                    <h2 id="contact-options-title">Ways to work together</h2>
                     <ul class="plain-list">
                         <li>Electric and upright bass performance</li>
                         <li>Drum set and percussion work</li>
@@ -55,12 +71,14 @@
                         <li>Composition for film and games</li>
                     </ul>
                 </div>
-                <figure class="contact-photo">
-                    <img src="images/web/electric-bass-portrait.webp" alt="Benji Stiles playing electric bass" loading="lazy">
-                </figure>
             </aside>
 
-            <form class="contact-form" data-contact-form>
+            <form class="contact-form panel" aria-labelledby="inquiry-form-title" aria-describedby="form-note" data-contact-form>
+                <div class="form-intro">
+                    <p class="section-label">Inquiry</p>
+                    <h2 id="inquiry-form-title">Tell me about your project.</h2>
+                    <p>Share the setting, timing, and kind of musical support you are looking for.</p>
+                </div>
                 <div class="form-field">
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" autocomplete="name" required>
@@ -85,19 +103,19 @@
                     <textarea id="message" name="message" rows="8" required></textarea>
                 </div>
                 <button class="button-solid" type="submit">Open email draft</button>
-                <p class="form-note">Submitting opens your email app with the message filled in.</p>
+                <p class="form-note" id="form-note">Submitting opens your email app with the message filled in.</p>
             </form>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="wrap footer-inner">
-            <p>&copy; 2026 Benji Stiles</p>
-            <div class="footer-links" aria-label="Social links">
-                <a href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer">Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank" rel="noreferrer">Facebook</a>
-                <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
+            <nav class="footer-links" aria-label="Social links">
+                <a href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
+                <a href="https://www.facebook.com/profile.php?id=100078161373243" target="_blank" rel="noreferrer" aria-label="Facebook">FB</a>
+                <a href="https://www.linkedin.com/in/benji-stiles-345a06284/" target="_blank" rel="noreferrer" aria-label="LinkedIn">IN</a>
+            </nav>
+            <p>&copy; 2026 Benji Stiles. All rights reserved.</p>
         </div>
     </footer>
 
