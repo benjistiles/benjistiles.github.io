@@ -38,9 +38,9 @@ const showData = [
         startTime: '12:00 PM',
         endTime: '2:00 PM',
         title: 'Jazz Brunch w/ Harper Krimm Quartet',
-        personnel: ['Harper Krimm — vocals and bandleader', 'Martin Lesch — keys', 'Benji Stiles — bass'],
+        personnel: ['Harper Krimm — vocals and bandleader', 'Martin Lesch — keys', 'Edward Hamilton — drums', 'Benji Stiles — bass'],
         address: 'Sonesta Resort and Spa, 130 Shipyard Dr, Hilton Head Island, SC',
-        notes: 'https://www.jazzforallages.com/'
+        link: 'https://www.jazzforallages.com/'
     }
 ];
 
@@ -108,12 +108,23 @@ const openShow = (show) => {
     dialog.querySelector('[data-show-title]').textContent = show.title;
 
     const location = dialog.querySelector('[data-show-location]');
-    location.textContent = show.address || '';
+    const locationLink = dialog.querySelector('[data-show-location-link]');
+    if (locationLink) {
+        locationLink.textContent = show.address || '';
+        locationLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(show.address || '')}`;
+    }
     location.hidden = !show.address;
 
     const notes = dialog.querySelector('[data-show-notes]');
     notes.textContent = show.notes || '';
     notes.hidden = !show.notes;
+
+    const showLinkWrap = dialog.querySelector('[data-show-link-wrap]');
+    const showLink = dialog.querySelector('[data-show-link]');
+    if (showLink && showLinkWrap) {
+        showLink.href = show.link || '#';
+        showLinkWrap.hidden = !show.link;
+    }
 
     const personnel = dialog.querySelector('[data-show-personnel]');
     personnel.innerHTML = '';
