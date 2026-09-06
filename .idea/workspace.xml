@@ -4,25 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a989d6-23ca-45eb-852a-cb934ff88684" name="Changes" comment="redesign">
+    <list default="true" id="03a989d6-23ca-45eb-852a-cb934ff88684" name="Changes" comment="light version-final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/shows.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shows.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shows.html" beforeDir="false" afterPath="$PROJECT_DIR$/shows.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/web/upright-performance.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/web/upright-performance.webp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="109" />
-  </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="experimental" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="experimental" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,59 +54,59 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.000000000043249" />
-      <entry key="S30" value="1.0016804328324043" />
-      <entry key="S60" value="1.2277840424387292" />
-      <entry key="M2" value="7.122545144243204" />
-      <entry key="M5" value="80.22009075123438" />
-      <entry key="M10" value="256.112615801948" />
-      <entry key="M15" value="424.3285506430404" />
-      <entry key="M30" value="799.7069041912766" />
-      <entry key="H1" value="1186.980767142552" />
-      <entry key="H2" value="1485.973645890844" />
-      <entry key="H4" value="1675.899074827766" />
-      <entry key="D1" value="1945.5204493763927" />
-      <entry key="W1" value="2577.9437668318956" />
+      <entry key="S2" value="1.0000000000580465" />
+      <entry key="S5" value="1.000080647317446" />
+      <entry key="S10" value="1.009607801102044" />
+      <entry key="S30" value="1.3683947932771134" />
+      <entry key="S60" value="2.392630439751316" />
+      <entry key="M2" value="5.871213500335128" />
+      <entry key="M5" value="20.859755981353484" />
+      <entry key="M10" value="71.72006154654012" />
+      <entry key="M15" value="159.27359818560228" />
+      <entry key="M30" value="474.7693549377277" />
+      <entry key="H1" value="933.0123841942476" />
+      <entry key="H2" value="1357.809479958039" />
+      <entry key="H4" value="1654.7461554407023" />
+      <entry key="D1" value="2045.3717891312558" />
+      <entry key="W1" value="2702.2556335347585" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.0064856911697175E-241" />
-      <entry key="S5" value="5.260123482985615E-97" />
-      <entry key="S10" value="7.309071648646777E-49" />
-      <entry key="S30" value="1.2360631894191625E-16" />
-      <entry key="S60" value="2.1468984873904422E-8" />
-      <entry key="M2" value="3.387926035060038E-4" />
-      <entry key="M5" value="0.12529710899673643" />
-      <entry key="M10" value="0.9603098438212492" />
-      <entry key="M15" value="1.9241555453624108" />
-      <entry key="M30" value="3.8980183412805447" />
-      <entry key="H1" value="5.5745074776497825" />
-      <entry key="H2" value="6.67500024069772" />
-      <entry key="H4" value="7.306705906555069" />
-      <entry key="D1" value="8.891526888302359" />
-      <entry key="W1" value="14.568984702511141" />
+      <entry key="MS500" value="1.5430633127907838E-68" />
+      <entry key="S2" value="1.593493653778392E-17" />
+      <entry key="S5" value="2.8398283644318473E-7" />
+      <entry key="S10" value="7.51165097954333E-4" />
+      <entry key="S30" value="0.14477292892555982" />
+      <entry key="S60" value="0.5684522694438479" />
+      <entry key="M2" value="1.2889472056580054" />
+      <entry key="M5" value="2.6312185605221186" />
+      <entry key="M10" value="3.967671484372279" />
+      <entry key="M15" value="5.0147558631187" />
+      <entry key="M30" value="7.445360138523983" />
+      <entry key="H1" value="10.090210661341294" />
+      <entry key="H2" value="12.155304172123582" />
+      <entry key="H4" value="13.462270989918501" />
+      <entry key="D1" value="15.722430089106206" />
+      <entry key="W1" value="21.53253350684635" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6029039138453802" />
-      <entry key="MS500" value="0.9037527267510859" />
-      <entry key="S2" value="0.9750174876533334" />
-      <entry key="S5" value="0.9899310855458512" />
-      <entry key="S10" value="0.9949528057307685" />
-      <entry key="S30" value="0.999992510295964" />
-      <entry key="S60" value="1.2268246580831035" />
-      <entry key="M2" value="7.121751342204078" />
-      <entry key="M5" value="80.3421079591267" />
-      <entry key="M10" value="257.06588109357176" />
-      <entry key="M15" value="426.2441225407936" />
-      <entry key="M30" value="803.5965910079333" />
-      <entry key="H1" value="1192.5493088237288" />
-      <entry key="H2" value="1492.6450445441105" />
-      <entry key="H4" value="1683.203796709732" />
-      <entry key="D1" value="1954.411597779816" />
-      <entry key="W1" value="2592.5126803277703" />
+      <entry key="MS100" value="0.6155722066724582" />
+      <entry key="MS500" value="0.9075191553171609" />
+      <entry key="S2" value="0.9760317607974343" />
+      <entry key="S5" value="0.9903971114658836" />
+      <entry key="S10" value="1.003850008838955" />
+      <entry key="S30" value="1.4957366573770314" />
+      <entry key="S60" value="2.9396591882935734" />
+      <entry key="M2" value="7.139369716967199" />
+      <entry key="M5" value="23.472778227212476" />
+      <entry key="M10" value="75.672057283247" />
+      <entry key="M15" value="164.27398771632917" />
+      <entry key="M30" value="482.2027115867645" />
+      <entry key="H1" value="943.0938554807082" />
+      <entry key="H2" value="1369.9593104418445" />
+      <entry key="H4" value="1668.2053325198606" />
+      <entry key="D1" value="2061.0936259234372" />
+      <entry key="W1" value="2723.7880643187123" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -125,7 +132,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;experimental&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -137,6 +144,57 @@
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="benjistiles.github.io" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="benjistiles.github.io" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="benjistiles.github.io" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="benjistiles.github.io" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -158,9 +216,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="redesign" />
-    <option name="LAST_COMMIT_MESSAGE" value="redesign" />
+    <MESSAGE value="light version-final" />
+    <option name="LAST_COMMIT_MESSAGE" value="light version-final" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

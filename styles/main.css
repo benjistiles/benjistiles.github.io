@@ -349,6 +349,8 @@ section[id] {
 .hero-slide-2 { background-image: url("../images/web/big-band.webp"); }
 .hero-slide-3 { background-image: url("../images/web/timpani.webp"); }
 .hero-slide-4 { background-image: url("../images/web/jazz-trio.webp"); }
+.hero-slide-5 { background-image: url("../images/web/duets1.webp"); }
+.hero-slide-6 { background-image: url("../images/web/drums.webp"); }
 
 .hero-slide.is-active {
     opacity: 1;
