@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03a989d6-23ca-45eb-852a-cb934ff88684" name="Changes" comment="light version-final">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/benjistiles.github.io.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/web/upright-performance.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/web/upright-performance.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/nfc.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/nfc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nfc.html" beforeDir="false" afterPath="$PROJECT_DIR$/nfc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/shows.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shows.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000580465" />
-      <entry key="S5" value="1.000080647317446" />
-      <entry key="S10" value="1.009607801102044" />
-      <entry key="S30" value="1.3683947932771134" />
-      <entry key="S60" value="2.392630439751316" />
-      <entry key="M2" value="5.871213500335128" />
-      <entry key="M5" value="20.859755981353484" />
-      <entry key="M10" value="71.72006154654012" />
-      <entry key="M15" value="159.27359818560228" />
-      <entry key="M30" value="474.7693549377277" />
-      <entry key="H1" value="933.0123841942476" />
-      <entry key="H2" value="1357.809479958039" />
-      <entry key="H4" value="1654.7461554407023" />
-      <entry key="D1" value="2045.3717891312558" />
-      <entry key="W1" value="2702.2556335347585" />
+      <entry key="MS100" value="1.2812646211722023" />
+      <entry key="MS500" value="1.7759332685139917" />
+      <entry key="S2" value="1.9783680101961116" />
+      <entry key="S5" value="2.2945059261100127" />
+      <entry key="S10" value="2.8447005419877964" />
+      <entry key="S30" value="7.168218501139514" />
+      <entry key="S60" value="13.821294782935643" />
+      <entry key="M2" value="22.34641599832878" />
+      <entry key="M5" value="39.830164545969424" />
+      <entry key="M10" value="84.9012706680451" />
+      <entry key="M15" value="163.59049518739153" />
+      <entry key="M30" value="464.4277150162381" />
+      <entry key="H1" value="923.0130468407532" />
+      <entry key="H2" value="1359.8177513560631" />
+      <entry key="H4" value="1669.5566555028638" />
+      <entry key="D1" value="2076.197914404861" />
+      <entry key="W1" value="2736.46843652446" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5430633127907838E-68" />
-      <entry key="S2" value="1.593493653778392E-17" />
-      <entry key="S5" value="2.8398283644318473E-7" />
-      <entry key="S10" value="7.51165097954333E-4" />
-      <entry key="S30" value="0.14477292892555982" />
-      <entry key="S60" value="0.5684522694438479" />
-      <entry key="M2" value="1.2889472056580054" />
-      <entry key="M5" value="2.6312185605221186" />
-      <entry key="M10" value="3.967671484372279" />
-      <entry key="M15" value="5.0147558631187" />
-      <entry key="M30" value="7.445360138523983" />
-      <entry key="H1" value="10.090210661341294" />
-      <entry key="H2" value="12.155304172123582" />
-      <entry key="H4" value="13.462270989918501" />
-      <entry key="D1" value="15.722430089106206" />
-      <entry key="W1" value="21.53253350684635" />
+      <entry key="MS500" value="1.7938638818181186E-152" />
+      <entry key="S2" value="1.1573037795004614E-38" />
+      <entry key="S5" value="6.6892751041907285E-16" />
+      <entry key="S10" value="2.588186115320699E-8" />
+      <entry key="S30" value="0.0033764699944581777" />
+      <entry key="S60" value="0.08496845803371778" />
+      <entry key="M2" value="0.5321891519720323" />
+      <entry key="M5" value="2.0252352800153415" />
+      <entry key="M10" value="3.709627233168349" />
+      <entry key="M15" value="4.950611504354646" />
+      <entry key="M30" value="7.6618077867815595" />
+      <entry key="H1" value="10.563167558065844" />
+      <entry key="H2" value="12.838891769923189" />
+      <entry key="H4" value="14.287284244984685" />
+      <entry key="D1" value="16.6885353941282" />
+      <entry key="W1" value="22.526003010771355" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6155722066724582" />
-      <entry key="MS500" value="0.9075191553171609" />
-      <entry key="S2" value="0.9760317607974343" />
-      <entry key="S5" value="0.9903971114658836" />
-      <entry key="S10" value="1.003850008838955" />
-      <entry key="S30" value="1.4957366573770314" />
-      <entry key="S60" value="2.9396591882935734" />
-      <entry key="M2" value="7.139369716967199" />
-      <entry key="M5" value="23.472778227212476" />
-      <entry key="M10" value="75.672057283247" />
-      <entry key="M15" value="164.27398771632917" />
-      <entry key="M30" value="482.2027115867645" />
-      <entry key="H1" value="943.0938554807082" />
-      <entry key="H2" value="1369.9593104418445" />
-      <entry key="H4" value="1668.2053325198606" />
-      <entry key="D1" value="2061.0936259234372" />
-      <entry key="W1" value="2723.7880643187123" />
+      <entry key="MS100" value="1.189017232796138" />
+      <entry key="MS500" value="1.7501172088084753" />
+      <entry key="S2" value="1.9711739026457724" />
+      <entry key="S5" value="2.2910064416929763" />
+      <entry key="S10" value="2.841968625400311" />
+      <entry key="S30" value="7.1596465721507885" />
+      <entry key="S60" value="13.8857677630991" />
+      <entry key="M2" value="22.855156136357436" />
+      <entry key="M5" value="41.83386757780328" />
+      <entry key="M10" value="88.5925896568395" />
+      <entry key="M15" value="168.52465323790182" />
+      <entry key="M30" value="472.07619786484025" />
+      <entry key="H1" value="933.5666411962892" />
+      <entry key="H2" value="1372.6506684313533" />
+      <entry key="H4" value="1683.8405648970215" />
+      <entry key="D1" value="2092.8858043560276" />
+      <entry key="W1" value="2758.9943292138514" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -121,85 +128,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="benjistiles.github.io" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="benjistiles.github.io" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="benjistiles.github.io" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="benjistiles.github.io" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
       </set>
     </attachedChunks>
   </component>

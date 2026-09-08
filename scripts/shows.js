@@ -40,7 +40,8 @@ const showData = [
         title: 'Jazz Brunch w/ Harper Krimm Quartet',
         personnel: ['Harper Krimm — vocals and bandleader', 'Martin Lesch — keys', 'Edward Hamilton — drums', 'Benji Stiles — bass'],
         address: 'Sonesta Resort and Spa, 130 Shipyard Dr, Hilton Head Island, SC',
-        link: 'https://www.jazzforallages.com/'
+        link: 'https://events.humanitix.com/jazz-brunch-sat-nov-14-harper-krimm',
+        notes: "Harper Krimm's Quartet Celebrates The Great American Songbook! Enjoy timeless Jazz standards with one of the brightest new voices of jazz. Ticket includes the concert and a gourmet southern brunch buffet!",
     }
 ];
 
