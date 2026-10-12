@@ -1,23 +1,5 @@
 const showData = [
     {
-        date: 'July 3, 2026',
-        datetime: '2026-07-03',
-        startTime: '7:00 PM',
-        title: 'Blackwood Jazz at Entre Nous',
-        personnel: ['Sam Clauter — clarinet and vocals', 'TJ Edwardz — keys and vocals', 'Benji Stiles — bass'],
-        address: '104 S Main Street, Greenville, SC',
-        notes: 'Reservations encouraged. Ages 21 and over.'
-    },
-    {
-        date: 'July 4, 2026',
-        datetime: '2026-07-04',
-        startTime: '11:30 AM',
-        title: 'Audrey Adams Band at Olde Eight',
-        personnel: ['Audrey Adams — guitar and vocals', 'Nathan Fowler — guitar and vocals', 'Braden Anderson — bass', 'Benji Stiles — drums'],
-        address: '709 Swing About, Greenwood, SC',
-        notes: 'Open to the public.'
-    },
-    {
         date: 'August 15–16, 2026',
         datetime: '2026-08-15',
         endDatetime: '2026-08-16',
@@ -31,6 +13,15 @@ const showData = [
         endTime: '7:00 PM',
         title: 'Private Event',
         personnel: ['Olivia Van Goor — vocals and bandleader', 'Lisa Sung — keys', 'Jeff Shoup — drums', 'Benji Stiles — bass']
+    },
+    {
+        date: 'November 6, 2026',
+        datetime: '2026-11-6',
+        startTime: '7:30 PM',
+        title: 'MSU Nonets with Leonard Clyde King, Jr.',
+        address: 'Fairchild Theatre; 333 West Circle Drive, East Lansing MI',
+        link: 'https://www.etix.com/ticket/p/72791313/jazz-nonets-with-leonard-clyde-king-jrjazz-drums-east-lansing-fairchild-theatre',
+        notes: "Jazz Nonets with Leonard Clyde King, Jr.",
     },
     {
         date: 'November 14, 2026',
