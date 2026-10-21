@@ -1,3 +1,21 @@
+const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+if (isLocalPreview) {
+    const localPageFiles = {
+        '/': 'index.html',
+        '/portfolio': 'portfolio.html',
+        '/shows': 'shows.html',
+        '/contact': 'contact.html'
+    };
+
+    document.querySelectorAll('a[href^="/"]').forEach((link) => {
+        const href = link.getAttribute('href');
+        const [route, fragment] = href.split('#');
+        const pageFile = localPageFiles[route];
+        if (pageFile) link.href = `${pageFile}${fragment ? `#${fragment}` : ''}`;
+    });
+}
+
 const nav = document.querySelector('.site-nav');
 const navToggle = document.querySelector('[data-nav-toggle]');
 const navLinks = document.querySelector('[data-nav-links]');
