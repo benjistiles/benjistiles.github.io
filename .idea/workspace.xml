@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="03a989d6-23ca-45eb-852a-cb934ff88684" name="Changes" comment="light version-final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/web/upright-performance.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/web/upright-performance.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/shows.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shows.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

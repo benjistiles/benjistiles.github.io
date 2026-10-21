@@ -33,6 +33,14 @@ const showData = [
         personnel: ['Olivia Van Goor — vocals and bandleader', 'Lisa Sung — keys', 'Jeff Shoup — drums', 'Benji Stiles — bass']
     },
     {
+        date: 'November 6, 2026',
+        datetime: '2026-11-06',
+        startTime: '07:30 PM',
+        title: 'Jazz Nonets with Leonard Clyde King, Jr.',
+        address: 'Fairchild Theatre, 542 Auditorium Road, East Lansing, MI 48824',
+        link: 'https://music.msu.edu/event/jazz-nonets-with-leonard-clyde-king-jr-jazz-drums/'
+    },
+    {
         date: 'November 14, 2026',
         datetime: '2026-11-14',
         startTime: '12:00 PM',
