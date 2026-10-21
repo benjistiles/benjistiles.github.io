@@ -47,8 +47,8 @@
                 max(14px, env(safe-area-inset-bottom))
                 max(14px, env(safe-area-inset-left));
             background:
-                radial-gradient(circle at 8% 5%, rgba(168, 111, 80, 0.20), transparent 20rem),
-                radial-gradient(circle at 95% 92%, rgba(104, 114, 96, 0.24), transparent 24rem),
+                radial-gradient(circle at 8% 5%, rgba(168, 111, 80, 0.13), transparent 20rem),
+                radial-gradient(circle at 95% 92%, rgba(104, 114, 96, 0.15), transparent 24rem),
                 var(--ink);
             color: var(--ink);
             font-family: var(--sans);
@@ -61,7 +61,7 @@
         }
 
         .page-shell {
-            width: min(100%, 680px);
+            width: min(100%, 620px);
             min-height: calc(100svh - 28px);
             margin-inline: auto;
             display: flex;
@@ -70,173 +70,77 @@
 
         .contact-card {
             width: 100%;
+            min-height: calc(100svh - 28px);
             overflow: hidden;
             background: var(--parchment);
             border: 1px solid var(--stone);
-            box-shadow: 10px 10px 0 rgba(168, 111, 80, 0.72);
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
             animation: card-in 500ms ease both;
+            display: flex;
+            flex-direction: column;
         }
 
-        .masthead {
-            min-height: 74px;
+        .logo-panel {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 13px 17px;
+            justify-content: center;
+            padding: 28px 24px 24px;
             background: var(--ink);
-            color: var(--parchment);
-            border-bottom: 5px solid var(--clay);
-        }
-
-        .brand-lockup {
-            display: flex;
-            align-items: center;
-            gap: 11px;
+            border-bottom: 1px solid rgba(242, 238, 230, 0.18);
         }
 
         .logo {
-            width: 48px;
-            height: 48px;
+            width: 72px;
+            height: 72px;
             display: block;
             object-fit: cover;
         }
 
-        .brand-copy {
+        .links {
+            width: 100%;
             display: grid;
-            gap: 1px;
+            flex: 1;
+            align-content: center;
+            padding: 24px;
         }
 
-        .brand-name {
-            font-family: var(--serif);
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-        }
-
-        .brand-role,
-        .card-index,
-        .eyebrow,
-        .availability-label,
-        .link-number,
-        footer {
+        .link-button {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            padding: 12px 16px;
             font-size: 0.65rem;
             font-weight: 700;
             letter-spacing: 0.16em;
             text-transform: uppercase;
-        }
-
-        .brand-role {
-            color: var(--stone);
-        }
-
-        .card-index {
-            flex: 0 0 auto;
-            color: var(--stone);
-            writing-mode: vertical-rl;
-        }
-
-        .intro {
-            position: relative;
-            padding: 36px 20px 28px;
-            border-bottom: 1px solid var(--stone);
-        }
-
-        .intro::before {
-            content: "";
-            position: absolute;
-            top: 36px;
-            left: 0;
-            width: 5px;
-            height: 68px;
-            background: var(--clay);
-        }
-
-        .eyebrow {
-            margin-bottom: 12px;
-            color: var(--sage-ink);
-        }
-
-        h1 {
-            max-width: 8ch;
-            font-family: var(--serif);
-            font-size: clamp(3.55rem, 17vw, 6rem);
-            font-weight: 400;
-            letter-spacing: -0.055em;
-            line-height: 0.82;
-        }
-
-        h1 span {
-            display: block;
-            margin-left: 0.5em;
-            color: var(--clay);
-            font-style: italic;
-        }
-
-        .intro-copy {
-            max-width: 34ch;
-            margin-top: 25px;
-            font-family: var(--serif);
-            font-size: 1.05rem;
-            line-height: 1.45;
-        }
-
-        .availability {
-            margin-top: 25px;
-            padding-top: 15px;
-            display: grid;
-            gap: 5px;
-            border-top: 1px solid var(--stone);
-        }
-
-        .availability-label {
-            color: var(--sage-ink);
-        }
-
-        .availability-copy {
-            max-width: 38ch;
-            font-size: 0.86rem;
-        }
-
-        .links {
-            display: grid;
-            padding: 9px 20px 20px;
-        }
-
-        .link-button {
-            min-height: 83px;
-            display: grid;
-            grid-template-columns: 30px minmax(0, 1fr) 30px;
-            align-items: center;
-            gap: 11px;
-            padding: 12px 4px;
-            border-bottom: 1px solid var(--stone);
-            transition: background-color var(--ease), color var(--ease), padding var(--ease);
+            border: 1px solid var(--stone);
+            border-radius: 10px;
+            transition: background-color var(--ease), color var(--ease), border-color var(--ease);
             -webkit-tap-highlight-color: transparent;
         }
 
-        .link-button:focus-visible {
-            position: relative;
-            z-index: 1;
-            outline: 3px solid var(--ink);
-            outline-offset: 3px;
+        .link-button:hover,
+        .link-button:active {
+            background: var(--stone);
         }
 
-        .link-number {
-            align-self: start;
-            padding-top: 9px;
-            color: var(--sage-ink);
+        .link-button:focus-visible {
+            outline: 3px solid var(--ink);
+            outline-offset: 3px;
         }
 
         .link-copy {
             min-width: 0;
             display: grid;
             gap: 2px;
+            text-align: center;
         }
 
         .link-label {
             font-family: var(--serif);
-            font-size: 1.28rem;
+            font-size: 1.2rem;
             font-weight: 700;
             letter-spacing: -0.015em;
         }
@@ -250,56 +154,35 @@
         .link-symbol {
             width: 30px;
             height: 30px;
-            display: grid;
-            place-items: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             justify-self: end;
             border: 1px solid currentColor;
             border-radius: 50%;
             font-family: var(--sans);
             font-size: 1rem;
             line-height: 1;
+            padding: 0;
+            text-align: center;
         }
 
-        .link-button:first-child {
-            margin-inline: -10px;
-            padding-inline: 14px;
-            background: var(--ink);
-            color: var(--parchment);
-            border-bottom: 0;
-        }
-
-        .link-button:first-child .link-number,
-        .link-button:first-child .link-detail {
-            color: var(--stone);
+        .link-symbol svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
         }
 
         footer {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 7px 16px;
-            padding: 15px 20px;
+            justify-content: center;
+            padding: 14px 24px;
+            border-radius: 0 0 16px 16px;
             background: var(--stone);
             color: #4a4f47;
-        }
-
-        @media (hover: hover) {
-            .link-button:hover {
-                padding-inline: 12px;
-                background: var(--stone);
-            }
-
-            .link-button:first-child:hover {
-                background: var(--sage-deep);
-            }
-        }
-
-        .link-button:active {
-            background: var(--stone);
-        }
-
-        .link-button:first-child:active {
-            background: var(--sage-deep);
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
         }
 
         @media (min-width: 600px) {
@@ -316,50 +199,12 @@
             }
 
             .contact-card {
-                box-shadow: 16px 16px 0 rgba(168, 111, 80, 0.72);
-            }
-
-            .masthead {
-                padding-inline: 28px;
-            }
-
-            .intro {
-                padding: 49px 34px 34px;
-                display: grid;
-                grid-template-columns: minmax(0, 1.15fr) minmax(200px, 0.85fr);
-                column-gap: 38px;
-            }
-
-            .intro::before {
-                top: 49px;
-            }
-
-            .intro-copy {
-                grid-column: 2;
-                grid-row: 1;
-                align-self: end;
-                margin: 0 0 8px;
-                font-size: 1.12rem;
-            }
-
-            .availability {
-                grid-column: 2;
-                grid-row: 2;
-                align-self: start;
-                margin-top: 24px;
+                min-height: calc(100svh - 56px);
+                box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
             }
 
             .links {
-                padding: 10px 34px 28px;
-            }
-
-            .link-button {
-                grid-template-columns: 38px minmax(0, 1fr) 34px;
-                gap: 17px;
-            }
-
-            footer {
-                padding-inline: 34px;
+                padding: 32px 30px;
             }
         }
 
@@ -395,60 +240,47 @@
 <body>
     <main class="page-shell">
         <article class="contact-card">
-            <header class="masthead">
-                <div class="brand-lockup">
-                    <img class="logo" src="images/logo.png" alt="">
-                    <div class="brand-copy">
-                        <p class="brand-name">Benji Stiles</p>
-                        <p class="brand-role">Jazz bassist</p>
-                    </div>
-                </div>
-                <p class="card-index" aria-hidden="true">Contact / 01</p>
-            </header>
+            <div class="logo-panel">
+                <img class="logo" src="images/logo.png" alt="Benji Stiles">
+            </div>
 
-            <section class="intro" aria-labelledby="page-title">
-                <div class="title-block">
-                    <p class="eyebrow">Performance · Education · Production</p>
-                    <h1 id="page-title">Benji <span>Stiles</span></h1>
-                </div>
-                <p class="intro-copy">A bassist, educator, and studio-minded musician creating thoughtful work across jazz and beyond.</p>
-                <div class="availability">
-                    <p class="availability-label">Available for</p>
-                    <p class="availability-copy">Live performance, sessions, private instruction, and creative collaboration.</p>
-                </div>
-            </section>
-
-            <nav class="links" aria-label="Contact and website links">
+            <nav class="links" aria-label="Benji Stiles links">
                 <a class="link-button" href="benji-stiles.vcf" type="text/vcard">
-                    <span class="link-number" aria-hidden="true">01</span>
                     <span class="link-copy">
                         <span class="link-label">Save contact</span>
                         <span class="link-detail">Add Benji to your phone</span>
                     </span>
                     <span class="link-symbol" aria-hidden="true">+</span>
                 </a>
-
                 <a class="link-button" href="mailto:benjistilesmusic@gmail.com?subject=Hello%20Benji">
-                    <span class="link-number" aria-hidden="true">02</span>
                     <span class="link-copy">
                         <span class="link-label">Send an email</span>
                         <span class="link-detail">benjistilesmusic@gmail.com</span>
                     </span>
                     <span class="link-symbol" aria-hidden="true">@</span>
                 </a>
-
                 <a class="link-button" href="https://benjistilesmusic.com/">
-                    <span class="link-number" aria-hidden="true">03</span>
                     <span class="link-copy">
                         <span class="link-label">Visit the website</span>
                         <span class="link-detail">benjistilesmusic.com</span>
                     </span>
                     <span class="link-symbol" aria-hidden="true">↗</span>
                 </a>
+
+                <a class="link-button" href="https://www.instagram.com/benjistilesmusic/" target="_blank" rel="noreferrer">
+                    <span class="link-copy">
+                        <span class="link-label">Follow on Instagram</span>
+                        <span class="link-detail">@benjistilesmusic</span>
+                    </span>
+                    <span class="link-symbol" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+                        </svg>
+                    </span>
+                </a>
             </nav>
 
             <footer>
-                <span>Michigan, USA</span>
                 <span>&copy; 2026 Benji Stiles</span>
             </footer>
         </article>

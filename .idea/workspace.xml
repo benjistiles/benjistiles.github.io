@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a989d6-23ca-45eb-852a-cb934ff88684" name="Changes" comment="light version-final">
+    <list default="true" id="03a989d6-23ca-45eb-852a-cb934ff88684" name="Changes" comment="update shows and nfc page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/shows.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shows.js" afterDir="false" />
     </list>
@@ -43,7 +43,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/benjistiles/benjistiles.github.io.git&quot;,
-    &quot;accountId&quot;: &quot;9230b415-3f4f-4ffb-9a56-5577d9d86a2b&quot;
+    &quot;accountId&quot;: &quot;b769802e-395d-4af8-989c-bc8adc59eb06&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -52,61 +52,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000580465" />
-      <entry key="S5" value="1.000080647317446" />
-      <entry key="S10" value="1.009607801102044" />
-      <entry key="S30" value="1.3683947932771134" />
-      <entry key="S60" value="2.392630439751316" />
-      <entry key="M2" value="5.871213500335128" />
-      <entry key="M5" value="20.859755981353484" />
-      <entry key="M10" value="71.72006154654012" />
-      <entry key="M15" value="159.27359818560228" />
-      <entry key="M30" value="474.7693549377277" />
-      <entry key="H1" value="933.0123841942476" />
-      <entry key="H2" value="1357.809479958039" />
-      <entry key="H4" value="1654.7461554407023" />
-      <entry key="D1" value="2045.3717891312558" />
-      <entry key="W1" value="2702.2556335347585" />
+      <entry key="MS100" value="1.6840050861191576" />
+      <entry key="MS500" value="2.84721334039202" />
+      <entry key="S2" value="6.062668437076836" />
+      <entry key="S5" value="8.237828508721222" />
+      <entry key="S10" value="9.629593344177266" />
+      <entry key="S30" value="14.456690927912414" />
+      <entry key="S60" value="21.238491790958324" />
+      <entry key="M2" value="29.909524179410596" />
+      <entry key="M5" value="47.53651278294464" />
+      <entry key="M10" value="92.6017961882936" />
+      <entry key="M15" value="171.2132449195915" />
+      <entry key="M30" value="471.89951251856263" />
+      <entry key="H1" value="930.4900591470205" />
+      <entry key="H2" value="1367.4329433913392" />
+      <entry key="H4" value="1677.3205268219738" />
+      <entry key="D1" value="2084.148992376905" />
+      <entry key="W1" value="2744.4592288916765" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5430633127907838E-68" />
-      <entry key="S2" value="1.593493653778392E-17" />
-      <entry key="S5" value="2.8398283644318473E-7" />
-      <entry key="S10" value="7.51165097954333E-4" />
-      <entry key="S30" value="0.14477292892555982" />
-      <entry key="S60" value="0.5684522694438479" />
-      <entry key="M2" value="1.2889472056580054" />
-      <entry key="M5" value="2.6312185605221186" />
-      <entry key="M10" value="3.967671484372279" />
-      <entry key="M15" value="5.0147558631187" />
-      <entry key="M30" value="7.445360138523983" />
-      <entry key="H1" value="10.090210661341294" />
-      <entry key="H2" value="12.155304172123582" />
-      <entry key="H4" value="13.462270989918501" />
-      <entry key="D1" value="15.722430089106206" />
-      <entry key="W1" value="21.53253350684635" />
+      <entry key="MS500" value="3.0799920192104254E-154" />
+      <entry key="S2" value="4.1892607984446354E-39" />
+      <entry key="S5" value="4.455075493010222E-16" />
+      <entry key="S10" value="2.1121925589696898E-8" />
+      <entry key="S30" value="0.0031553114232457753" />
+      <entry key="S60" value="0.08213862046324805" />
+      <entry key="M2" value="0.5232519452016905" />
+      <entry key="M5" value="2.0115619765143933" />
+      <entry key="M10" value="3.697083317120459" />
+      <entry key="M15" value="4.939445044416317" />
+      <entry key="M30" value="7.653162029774449" />
+      <entry key="H1" value="10.557206017345623" />
+      <entry key="H2" value="12.835268312381343" />
+      <entry key="H4" value="14.285267987586964" />
+      <entry key="D1" value="16.68814284971483" />
+      <entry key="W1" value="22.52592731684163" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6155722066724582" />
-      <entry key="MS500" value="0.9075191553171609" />
-      <entry key="S2" value="0.9760317607974343" />
-      <entry key="S5" value="0.9903971114658836" />
-      <entry key="S10" value="1.003850008838955" />
-      <entry key="S30" value="1.4957366573770314" />
-      <entry key="S60" value="2.9396591882935734" />
-      <entry key="M2" value="7.139369716967199" />
-      <entry key="M5" value="23.472778227212476" />
-      <entry key="M10" value="75.672057283247" />
-      <entry key="M15" value="164.27398771632917" />
-      <entry key="M30" value="482.2027115867645" />
-      <entry key="H1" value="943.0938554807082" />
-      <entry key="H2" value="1369.9593104418445" />
-      <entry key="H4" value="1668.2053325198606" />
-      <entry key="D1" value="2061.0936259234372" />
-      <entry key="W1" value="2723.7880643187123" />
+      <entry key="MS100" value="1.3341540446230864" />
+      <entry key="MS500" value="2.6765823996151146" />
+      <entry key="S2" value="5.928212599798211" />
+      <entry key="S5" value="8.16511860017707" />
+      <entry key="S10" value="9.588478488539272" />
+      <entry key="S30" value="14.434812819314581" />
+      <entry key="S60" value="21.293764769721452" />
+      <entry key="M2" value="30.406164339548287" />
+      <entry key="M5" value="49.52525796204058" />
+      <entry key="M10" value="96.2799169861253" />
+      <entry key="M15" value="176.13579589474432" />
+      <entry key="M30" value="479.53912564663364" />
+      <entry key="H1" value="941.0375778308099" />
+      <entry key="H2" value="1380.26217891986" />
+      <entry key="H4" value="1691.6023905451564" />
+      <entry key="D1" value="2100.8364848169044" />
+      <entry key="W1" value="2766.985045175797" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -140,66 +140,16 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="benjistiles.github.io" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="benjistiles.github.io" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="benjistiles.github.io" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="benjistiles.github.io" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
       </set>
     </attachedChunks>
   </component>
@@ -230,7 +180,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="redesign" />
     <MESSAGE value="light version-final" />
-    <option name="LAST_COMMIT_MESSAGE" value="light version-final" />
+    <MESSAGE value="update shows and nfc page" />
+    <option name="LAST_COMMIT_MESSAGE" value="update shows and nfc page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
